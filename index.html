@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f1e8" />
+  <title>東京・神奈川・富士山 7日6夜 孝親慢活之旅</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --paper: #fffdf9;
+      --paper-soft: #f9f6ef;
+      --ink: #2c2825;
+      --ink-secondary: #5a524b;
+      --muted: #857b70;
+      --line: #e2dacb;
+      --line-strong: #cfc4b0;
+
+      /* 日式傳統色系 (和色) */
+      --momiji: #b34233;       /* 紅葉紅・茜色 */
+      --momiji-soft: #f9ece9;
+      --momiji-border: #e6c5bf;
+
+      --matcha: #47684b;       /* 抹茶綠・千歳緑 */
+      --matcha-soft: #edf3ed;
+      --matcha-border: #c5d8c7;
+
+      --ai: #2d4b65;           /* 藍染・靛藍 (富士山/交通) */
+      --ai-soft: #ebf1f6;
+      --ai-border: #c4d5e3;
+
+      --kitsune: #a66a2c;      /* 狐色・琥珀金 (飲食/重點) */
+      --kitsune-soft: #fbf3e6;
+      --kitsune-border: #e6cfa8;
+
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --shadow: 0 10px 28px rgba(44, 40, 37, 0.07), 0 2px 6px rgba(44, 40, 37, 0.04);
+
+      /* 字體大小控制 (預設為適合長輩的大字版) */
+      --scale: 1;
+    }
+
+    html[data-font="xl"] {
+      --scale: 1.14;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(rgba(133, 123, 112, 0.07) 1px, transparent 0),
+        radial-gradient(rgba(133, 123, 112, 0.05) 1px, transparent 0);
+      background-size: 28px 28px;
+      background-position: 0 0, 14px 14px;
+      color: var(--ink);
+      font-family: "PingFang HK", "Noto Sans TC", "Hiragino Sans", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: calc(17px * var(--scale));
+      line-height: 1.65;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .app {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 16px 16px 110px;
+    }
+
+    /* 頂部工具列：字體切換與快速跳轉 */
+    .top-utility {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding: 10px 14px;
+      background: var(--paper);
+      border: 1.5px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 4px 14px rgba(44, 40, 37, 0.04);
+    }
+
+    .brand-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: calc(15px * var(--scale));
+      color: var(--ink-secondary);
+    }
+
+    .brand-stamp {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: var(--momiji);
+      color: #fff;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    .font-switch {
+      display: inline-flex;
+      background: var(--paper-soft);
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 3px;
+      gap: 4px;
+    }
+
+    .font-btn {
+      border: 0;
+      background: transparent;
+      color: var(--ink-secondary);
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 6px 12px;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .font-btn.active {
+      background: var(--ink);
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+    }
+
+    /* 卡片基礎樣式 */
+    .card, .day-card {
+      background: var(--paper);
+      border: 1.5px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    /* Hero 封面區塊 */
+    .hero {
+      position: relative;
+      padding: 28px 22px 24px;
+      background: 
+        radial-gradient(circle at 88% 18%, rgba(179, 66, 51, 0.09) 0%, transparent 45%),
+        radial-gradient(circle at 12% 85%, rgba(45, 75, 101, 0.07) 0%, transparent 50%),
+        var(--paper);
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 99px;
+      background: var(--momiji-soft);
+      border: 1px solid var(--momiji-border);
+      color: var(--momiji);
+      font-size: calc(13px * var(--scale));
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .hero h1 {
+      font-size: calc(32px * var(--scale));
+      line-height: 1.22;
+      margin: 12px 0 8px;
+      color: var(--ink);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-dates {
+      font-size: calc(17px * var(--scale));
+      font-weight: 700;
+      color: var(--ink-secondary);
+      margin: 0;
+    }
+
+    .hero-sub {
+      margin: 8px 0 0;
+      font-size: calc(15px * var(--scale));
+      color: var(--muted);
+    }
+
+    .fuji-art {
+      flex-shrink: 0;
+      width: 92px;
+      height: 92px;
+    }
+
+    /* 航班資訊卡片 (清晰登機證風格) */
+    .flight-box {
+      margin-top: 22px;
+      background: var(--paper-soft);
+      border: 1.5px solid var(--line-strong);
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .section-head-inline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding: 0 4px;
+    }
+
+    .section-head-inline strong {
+      font-size: calc(18px * var(--scale));
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-head-inline span {
+      font-size: calc(13px * var(--scale));
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .flight-ticket-card {
+      background: var(--paper);
+      border: 1.5px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .flight-ticket-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .flight-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px dashed var(--line);
+    }
+
+    .flight-dir {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 11px;
+      border-radius: 8px;
+      font-size: calc(14px * var(--scale));
+      font-weight: 900;
+      background: var(--ai-soft);
+      color: var(--ai);
+    }
+
+    .flight-ticket-card.return .flight-dir {
+      background: var(--momiji-soft);
+      color: var(--momiji);
+    }
+
+    .flight-no {
+      font-size: calc(16px * var(--scale));
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .flight-route-main {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      padding: 6px 0;
+    }
+
+    .flight-port .time {
+      font-size: calc(26px * var(--scale));
+      font-weight: 900;
+      color: var(--ink);
+      line-height: 1.1;
+      display: block;
+    }
+
+    .flight-port .city {
+      font-size: calc(16px * var(--scale));
+      font-weight: 800;
+      color: var(--ink-secondary);
+      margin-top: 4px;
+      display: block;
+    }
+
+    .flight-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--muted);
+      font-size: calc(13px * var(--scale));
+      font-weight: 700;
+    }
+
+    .flight-arrow .line-plane {
+      font-size: calc(20px * var(--scale));
+      color: var(--ai);
+      line-height: 1;
+      margin: 2px 0;
+    }
+
+    .flight-ticket-card.return .flight-arrow .line-plane {
+      color: var(--momiji);
+    }
+
+    .flight-note {
+      margin-top: 12px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      background: var(--kitsune-soft);
+      border: 1px solid var(--kitsune-border);
+      color: var(--ink-secondary);
+      font-size: calc(14px * var(--scale));
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* 兩階段住宿卡片 */
+    .stay-section {
+      margin-top: 18px;
+    }
+
+    .stay-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .stay-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 16px;
+      border-radius: 18px;
+      background: var(--paper);
+      border: 1.5px solid var(--line-strong);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .stay-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .stay-stage {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 8px;
+      font-size: calc(13px * var(--scale));
+      font-weight: 900;
+      background: var(--matcha-soft);
+      color: var(--matcha);
+      border: 1px solid var(--matcha-border);
+      margin-bottom: 6px;
+    }
+
+    .stay-card.stage-2 .stay-stage {
+      background: var(--momiji-soft);
+      color: var(--momiji);
+      border-color: var(--momiji-border);
+    }
+
+    .stay-title {
+      font-size: calc(20px * var(--scale));
+      font-weight: 900;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .stay-dates {
+      font-size: calc(14px * var(--scale));
+      color: var(--ink-secondary);
+      font-weight: 700;
+      margin: 3px 0 0;
+    }
+
+    .stay-perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stay-perk {
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: var(--paper-soft);
+      border: 1px solid var(--line);
+      font-size: calc(13.5px * var(--scale));
+      font-weight: 700;
+      color: var(--ink-secondary);
+    }
+
+    .stay-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .btn-link {
+      flex: 1;
+      min-width: 140px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      font-size: calc(15px * var(--scale));
+      font-weight: 800;
+      background: var(--ink);
+      color: #fff;
+      text-align: center;
+    }
+
+    .btn-link.secondary {
+      background: var(--paper-soft);
+      color: var(--ink);
+      border: 1.5px solid var(--line-strong);
+    }
+
+    /* Sticky 快速日期導覽列 */
+    .quick-nav {
+      position: sticky;
+      top: 10px;
+      z-index: 40;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      margin: 0 -2px 20px;
+      padding: 10px;
+      background: rgba(255, 253, 249, 0.94);
+      border: 1.5px solid var(--line-strong);
+      border-radius: 22px;
+      box-shadow: 0 12px 26px rgba(44, 40, 37, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      scrollbar-width: none;
+    }
+
+    .quick-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .quick-nav a {
+      flex: 0 0 72px;
+      padding: 8px 6px;
+      border-radius: 15px;
+      background: var(--paper-soft);
+      border: 1.5px solid var(--line);
+      color: var(--ink-secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .quick-nav a small {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--muted);
+      line-height: 1.1;
+    }
+
+    .quick-nav a b {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin: 2px 0;
+      color: var(--ink);
+    }
+
+    .quick-nav a em {
+      font-style: normal;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--ink-secondary);
+      white-space: nowrap;
+    }
+
+    .quick-nav a.active {
+      background: var(--momiji);
+      border-color: var(--momiji);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(179, 66, 51, 0.28);
+    }
+
+    .quick-nav a.active small,
+    .quick-nav a.active b,
+    .quick-nav a.active em {
+      color: #fff;
+    }
+
+    /* 通用區塊標題 */
+    .section-card {
+      padding: 22px 20px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .section-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      background: var(--momiji-soft);
+      border: 1px solid var(--momiji-border);
+      flex-shrink: 0;
+    }
+
+    .section-header h2 {
+      font-size: calc(22px * var(--scale));
+      margin: 0;
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .section-lead {
+      margin: 0 0 16px;
+      font-size: calc(15.5px * var(--scale));
+      color: var(--ink-secondary);
+    }
+
+    /* 導遊小貼士 & 長輩貼心重點 */
+    .guide-quote {
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, var(--matcha-soft), #f5f8f5);
+      border: 1.5px solid var(--matcha-border);
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .guide-quote strong {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: var(--matcha);
+      color: #fff;
+      font-size: calc(13.5px * var(--scale));
+      margin-bottom: 8px;
+    }
+
+    .guide-quote p {
+      margin: 0;
+      font-size: calc(16.5px * var(--scale));
+      font-weight: 700;
+      line-height: 1.65;
+    }
+
+    .care-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 520px) {
+      .care-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .care-item {
+      padding: 15px 16px;
+      border-radius: 16px;
+      background: var(--paper-soft);
+      border: 1.5px solid var(--line);
+    }
+
+    .care-item b {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: calc(16.5px * var(--scale));
+      color: var(--ink);
+      margin-bottom: 5px;
+    }
+
+    .care-item p {
+      margin: 0;
+      font-size: calc(14.5px * var(--scale));
+      color: var(--ink-secondary);
+      line-height: 1.55;
+    }
+
+    /* 11月天氣與穿著卡片 */
+    .weather-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .weather-box {
+      padding: 14px 10px;
+      border-radius: 16px;
+      background: var(--paper-soft);
+      border: 1.5px solid var(--line);
+      text-align: center;
+    }
+
+    .weather-box small {
+      display: block;
+      font-size: calc(13px * var(--scale));
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .weather-box strong {
+      display: block;
+      font-size: calc(20px * var(--scale));
+      color: var(--ink);
+      margin: 4px 0 2px;
+      font-weight: 900;
+    }
+
+    .weather-box span {
+      display: block;
+      font-size: calc(12.5px * var(--scale));
+      color: var(--ink-secondary);
+      font-weight: 700;
+    }
+
+    .jma-links {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    @media (min-width: 480px) {
+      .jma-links {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .jma-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: var(--ai-soft);
+      border: 1.5px solid var(--ai-border);
+      color: var(--ai);
+      font-size: calc(15px * var(--scale));
+      font-weight: 800;
+      text-align: center;
+    }
+
+    /* 階段分隔橫幅 */
+    .stage-banner {
+      margin: 28px 0 16px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #2d4b65, #1f374b);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stage-banner.stage-tokyo {
+      background: linear-gradient(135deg, #9e382b, #7a291f);
+    }
+
+    .stage-banner .stage-kicker {
+      font-size: calc(13px * var(--scale));
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      opacity: 0.9;
+    }
+
+    .stage-banner h2 {
+      margin: 0;
+      font-size: calc(24px * var(--scale));
+      font-weight: 900;
+      line-height: 1.3;
+    }
+
+    .stage-banner p {
+      margin: 2px 0 0;
+      font-size: calc(15px * var(--scale));
+      opacity: 0.92;
+      font-weight: 600;
+    }
+
+    /* 每日行程卡 */
+    .day-card {
+      scroll-margin-top: 108px;
+    }
+
+    .day-header {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 20px 20px 18px;
+      background: linear-gradient(135deg, #fbf8f1, #f3ede0);
+      border-bottom: 1.5px solid var(--line);
+    }
+
+    .date-badge {
+      background: var(--paper);
+      border: 1.5px solid var(--line-strong);
+      border-radius: 16px;
+      padding: 8px 6px;
+      text-align: center;
+      line-height: 1.1;
+      box-shadow: 0 3px 8px rgba(44, 40, 37, 0.05);
+    }
+
+    .date-badge .dow {
+      display: block;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--momiji);
+      letter-spacing: 0.06em;
+    }
+
+    .date-badge .dom {
+      display: block;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--ink);
+      margin: 3px 0;
+    }
+
+    .date-badge .mon {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .day-title-wrap .day-num {
+      display: inline-block;
+      font-size: calc(13px * var(--scale));
+      font-weight: 900;
+      color: var(--momiji);
+      letter-spacing: 0.08em;
+      background: var(--momiji-soft);
+      padding: 2px 9px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+    }
+
+    .day-title-wrap h3 {
+      margin: 0;
+      font-size: calc(22px * var(--scale));
+      line-height: 1.3;
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .day-title-wrap p {
+      margin: 5px 0 0;
+      font-size: calc(15px * var(--scale));
+      color: var(--ink-secondary);
+      font-weight: 600;
+    }
+
+    /* 時間軸清單 */
+    .timeline {
+      list-style: none;
+      margin: 0;
+      padding: 8px 18px 10px;
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 12px;
+      padding: 16px 2px;
+      border-bottom: 1.5px dashed var(--line);
+      align-items: start;
+    }
+
+    .tl-item:last-child {
+      border-bottom: 0;
+    }
+
+    .tl-period {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      padding-top: 2px;
+    }
+
+    .period-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: calc(14px * var(--scale));
+      font-weight: 900;
+      background: var(--paper-soft);
+      border: 1.5px solid var(--line-strong);
+      color: var(--ink);
+      text-align: center;
+      min-width: 68px;
+    }
+
+    .tl-time-sub {
+      font-size: calc(13px * var(--scale));
+      font-weight: 800;
+      color: var(--momiji);
+      padding-left: 4px;
+    }
+
+    .tl-body {
+      min-width: 0;
+    }
+
+    .tl-type-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+      flex-wrap: wrap;
+    }
+
+    .type-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 9px;
+      border-radius: 99px;
+      font-size: calc(13px * var(--scale));
+      font-weight: 800;
+    }
+
+    .type-move {
+      background: var(--ai-soft);
+      color: var(--ai);
+      border: 1px solid var(--ai-border);
+    }
+
+    .type-spot {
+      background: var(--momiji-soft);
+      color: var(--momiji);
+      border: 1px solid var(--momiji-border);
+    }
+
+    .type-food {
+      background: var(--kitsune-soft);
+      color: var(--kitsune);
+      border: 1px solid var(--kitsune-border);
+    }
+
+    .type-stay {
+      background: var(--matcha-soft);
+      color: var(--matcha);
+      border: 1px solid var(--matcha-border);
+    }
+
+    .tl-title {
+      font-size: calc(18.5px * var(--scale));
+      font-weight: 900;
+      color: var(--ink);
+      margin: 0 0 4px;
+      line-height: 1.38;
+    }
+
+    .tl-desc {
+      margin: 0;
+      font-size: calc(16px * var(--scale));
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+
+    .map-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 8px;
+      padding: 5px 11px;
+      border-radius: 9px;
+      background: var(--paper-soft);
+      border: 1px solid var(--line-strong);
+      font-size: calc(13.5px * var(--scale));
+      font-weight: 800;
+      color: var(--ink-secondary);
+    }
+
+    /* 每日長輩貼心提醒欄 */
+    .day-tips {
+      margin: 6px 18px 18px;
+      padding: 15px 16px;
+      border-radius: 16px;
+      background: var(--matcha-soft);
+      border: 1.5px solid var(--matcha-border);
+    }
+
+    .day-tips-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 99px;
+      background: #fff;
+      color: var(--matcha);
+      font-size: calc(13.5px * var(--scale));
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .day-tips ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--ink);
+      font-size: calc(15px * var(--scale));
+      line-height: 1.6;
+    }
+
+    .day-tips li + li {
+      margin-top: 4px;
+    }
+
+    /* 出發前清單 (可勾選並自動儲存) */
+    .checklist-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 15px;
+      border-radius: 14px;
+      background: var(--paper-soft);
+      border: 1.5px solid var(--line);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .check-item input[type="checkbox"] {
+      width: 22px;
+      height: 22px;
+      margin-top: 3px;
+      accent-color: var(--matcha);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .check-item span {
+      font-size: calc(16px * var(--scale));
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+
+    .check-item small {
+      display: block;
+      font-size: calc(13.5px * var(--scale));
+      color: var(--muted);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .check-item.checked {
+      background: var(--matcha-soft);
+      border-color: var(--matcha-border);
+    }
+
+    .check-item.checked span {
+      text-decoration: line-through;
+      color: var(--muted);
+    }
+
+    /* 底部結語 */
+    .footer-blessing {
+      padding: 24px 20px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--momiji), #913124);
+      color: #fff;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .footer-blessing h3 {
+      margin: 0 0 6px;
+      font-size: calc(21px * var(--scale));
+      font-weight: 900;
+    }
+
+    .footer-blessing p {
+      margin: 0;
+      font-size: calc(15.5px * var(--scale));
+      opacity: 0.94;
+    }
+
+    footer {
+      padding: 24px 10px 10px;
+      text-align: center;
+      font-size: calc(13.5px * var(--scale));
+      color: var(--muted);
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+      body {
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .top-utility, .quick-nav {
+        display: none;
+      }
+      .app {
+        max-width: 100%;
+        padding: 0;
+      }
+      .card, .day-card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <!-- 頂部字體大小切換欄 (長輩友善) -->
+    <div class="top-utility" role="region" aria-label="閱讀設定">
+      <div class="brand-tag">
+        <span class="brand-stamp" aria-hidden="true">旅</span>
+        <span>東京・神奈川 孝親慢活筆記</span>
+      </div>
+      <div class="font-switch" role="group" aria-label="字體大小切換">
+        <button type="button" class="font-btn active" data-size="normal" aria-pressed="true">標準大字</button>
+        <button type="button" class="font-btn" data-size="xl" aria-pressed="false">特大字體</button>
+      </div>
+    </div>
+
+    <!-- Hero 封面與航班、住宿總覽 -->
+    <section class="card hero">
+      <div class="hero-top">
+        <div>
+          <span class="kicker">🍁 秋日紅葉・孝親之旅</span>
+          <h1>東京・神奈川・富士山<br />7日6夜慢活之旅</h1>
+          <p class="hero-dates">2026年11月12日 (四) — 11月18日 (三)</p>
+          <p class="hero-sub">海老名近郊慢活 3 晚 ＋ 新宿御苑市區精華 3 晚</p>
+        </div>
+        <!-- 日式簡約富士山與紅葉插畫 SVG -->
+        <svg class="fuji-art" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="富士山與秋日紅日圖示" role="img">
+          <circle cx="60" cy="60" r="54" fill="#F9ECE9" stroke="#E2DACB" stroke-width="2"/>
+          <circle cx="72" cy="44" r="22" fill="#B34233" opacity="0.88"/>
+          <path d="M16 94L45 48C48 43 52 43 55 48L62 59L73 43C76 39 81 39 84 44L106 94H16Z" fill="#2D4B65"/>
+          <path d="M45 48C48 43 52 43 55 48L60 56L54 60L50 55L45 61L40 56L45 48Z" fill="#FFFDF9"/>
+          <path d="M73 43C76 39 81 39 84 44L90 57L83 60L79 54L74 60L69 54L73 43Z" fill="#FFFDF9"/>
+          <path d="M12 94H108" stroke="#cfc4b0" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- ✈️ 航班資料備忘 -->
+      <section class="flight-box" aria-label="航班資料備忘">
+        <div class="section-head-inline">
+          <strong>✈️ 航班資料備忘</strong>
+          <span>大灣區航空 Greater Bay Airlines</span>
+        </div>
+
+        <!-- 去程 -->
+        <article class="flight-ticket-card">
+          <div class="flight-badge-row">
+            <span class="flight-dir">去程 · 11月12日 (四)</span>
+            <span class="flight-no">航班 HB2326</span>
+          </div>
+          <div class="flight-route-main">
+            <div class="flight-port">
+              <span class="time">09:55</span>
+              <span class="city">香港 HKG</span>
+            </div>
+            <div class="flight-arrow">
+              <span>直航</span>
+              <span class="line-plane">── ✈ ──</span>
+              <span>約 4小時10分</span>
+            </div>
+            <div class="flight-port">
+              <span class="time">15:05</span>
+              <span class="city">成田 NRT (T2)</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 回程 -->
+        <article class="flight-ticket-card return">
+          <div class="flight-badge-row">
+            <span class="flight-dir">回程 · 11月18日 (三)</span>
+            <span class="flight-no">航班 HB321</span>
+          </div>
+          <div class="flight-route-main">
+            <div class="flight-port">
+              <span class="time">15:10</span>
+              <span class="city">成田 NRT (T2)</span>
+            </div>
+            <div class="flight-arrow">
+              <span>直航</span>
+              <span class="line-plane">── ✈ ──</span>
+              <span>約 5小時40分</span>
+            </div>
+            <div class="flight-port">
+              <span class="time">19:50</span>
+              <span class="city">香港 HKG</span>
+            </div>
+          </div>
+          <div class="flight-note">
+            <span>⏰</span>
+            <span>回程溫馨提示：15:10 起飛，最遲 <strong>12:30</strong> 到達一號／二號客運大樓 (T2) 辦理 Check-in。</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- 🏨 兩站住宿總覽 -->
+      <section class="stay-section" aria-label="住宿安排">
+        <div class="section-head-inline">
+          <strong>🏨 兩站住宿安排 (只換一次酒店)</strong>
+          <span>點按按鈕可直接開地圖／房源</span>
+        </div>
+        <div class="stay-grid">
+          <!-- 第一站 -->
+          <div class="stay-card stage-1">
+            <div class="stay-head">
+              <div>
+                <span class="stay-stage">第一站：神奈川近郊慢活 (Day 1 – Day 4)</span>
+                <h3 class="stay-title">Hotel Vista Ebina (海老名維斯塔酒店)</h3>
+                <p class="stay-dates">入住：11月12日 (四) ｜ 退房：11月15日 (日) · 共 3 晚</p>
+              </div>
+            </div>
+            <div class="stay-perks">
+              <span class="stay-perk">🚶 旁邊就是 LaLaPort 大型商場</span>
+              <span class="stay-perk">🚆 小田急線直達鐮倉(藤澤)、箱根、新宿</span>
+            </div>
+            <div class="stay-actions">
+              <a class="btn-link" href="https://www.google.com/maps/place/Hotel+Vista+Ebina/@35.4526086,139.3907151,16z/data=!3m1!5s0x6018556f3eab1b1d:0xaa4b73d605c2eb96!4m11!3m10!1s0x6018556f3c77416f:0xfe45e419f9f1b594!5m4!1s2026-11-12!2i3!4m1!1i2!8m2!3d35.4509688!4d139.3917539!16s%2Fg%2F1wn_621f!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                📍 開啟 Google Maps 導航 ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- 第二站 -->
+          <div class="stay-card stage-2">
+            <div class="stay-head">
+              <div>
+                <span class="stay-stage">第二站：市區精華與富士山 (Day 4 – Day 7)</span>
+                <h3 class="stay-title">新宿御苑 Airbnb 家庭式寓所</h3>
+                <p class="stay-dates">入住：11月15日 (日) ｜ 退房：11月18日 (三) · 共 3 晚 (3位成人)</p>
+              </div>
+            </div>
+            <div class="stay-perks">
+              <span class="stay-perk">🛗 設有電梯 (免搬行李行樓梯)</span>
+              <span class="stay-perk">🍳 設有廚房 (可煮和牛、煲熱湯)</span>
+              <span class="stay-perk">🍁 鄰近新宿御苑賞紅葉</span>
+            </div>
+            <div class="stay-actions">
+              <a class="btn-link" href="https://www.airbnb.com.hk/rooms/1688728307873218500?unique_share_id=9a6248b0-7b12-47b6-99f3-b07b4bebc001&viralityEntryPoint=1&s=76&source_impression_id=p3_1791900360_P3MlMRh4voJO44g7&check_in=2026-11-15&guests=3&adults=3&check_out=2026-11-18&room_id=1688728307873218500" target="_blank" rel="noopener noreferrer">
+                🏠 查看 Airbnb 房源詳情 ↗
+              </a>
+              <a class="btn-link secondary" href="https://www.google.com/maps/search/?api=1&query=新宿御苑" target="_blank" rel="noopener noreferrer">
+                📍 新宿御苑周邊地圖
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- 每日快速導覽列 (Sticky) -->
+    <nav class="quick-nav" aria-label="每日行程快速導覽">
+      <a href="#d12" class="active" aria-current="page">
+        <small>DAY 1 · 四</small>
+        <b>11/12</b>
+        <em>抵達海老名</em>
+      </a>
+      <a href="#d13">
+        <small>DAY 2 · 五</small>
+        <b>11/13</b>
+        <em>鐮倉大佛</em>
+      </a>
+      <a href="#d14">
+        <small>DAY 3 · 六</small>
+        <b>11/14</b>
+        <em>箱根大涌谷</em>
+      </a>
+      <a href="#d15">
+        <small>DAY 4 · 日</small>
+        <b>11/15</b>
+        <em>新宿御苑</em>
+      </a>
+      <a href="#d16">
+        <small>DAY 5 · 一</small>
+        <b>11/16</b>
+        <em>富士山河口湖</em>
+      </a>
+      <a href="#d17">
+        <small>DAY 6 · 二</small>
+        <b>11/17</b>
+        <em>築地・神宮</em>
+      </a>
+      <a href="#d18">
+        <small>DAY 7 · 三</small>
+        <b>11/18</b>
+        <em>衝刺回港</em>
+      </a>
+    </nav>
+
+    <!-- 導遊小貼士 & 長輩安心重點 -->
+    <section class="card section-card">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">🍵</div>
+        <h2>導遊小貼士・行程設計亮點</h2>
+      </div>
+      <div class="guide-quote">
+        <strong>💡 導遊小貼士</strong>
+        <p>呢個行程完全發揮咗<strong>海老名</strong>同<strong>新宿</strong>嘅地理優勢，長輩唔使頻撲轉車，而且有 Airbnb 廚房做後盾，隨時可以畀父母飲啖熱湯。祝你同爸爸媽媽有一個完美嘅東京之旅！</p>
+      </div>
+      <div class="care-grid">
+        <div class="care-item">
+          <b>🚆 交通最順・少轉車</b>
+          <p>頭三晚住海老名，坐小田急線一線直達藤澤（轉江之電去鐮倉）、箱根湯本同新宿，避開東京市中心繁忙轉車人潮。</p>
+        </div>
+        <div class="care-item">
+          <b>👟 路況平坦・長輩舒服</b>
+          <p>鐮倉大佛、大石公園、新宿御苑都係平路為主；去明治神宮行碎石路記得著避震好嘅波鞋。</p>
+        </div>
+        <div class="care-item">
+          <b>🍲 設有電梯及私人廚房</b>
+          <p>新宿 Airbnb 有電梯唔使抬行李；夜晚喺超市買靚和牛、刺身返去慢慢嘆，隨時煲熱水、滾熱湯最啱父母胃口。</p>
+        </div>
+        <div class="care-item">
+          <b>🗻 避開周末人潮睇富士山</b>
+          <p>特別安排星期一（11/16）先去河口湖大石公園，車程同景點都少好多遊客，一家人打卡更從容。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11月中旬天氣與穿著指南 -->
+    <section class="card section-card">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">🍁</div>
+        <h2>11月中旬天氣與衣著提醒</h2>
+      </div>
+      <p class="section-lead">11月中旬正值東京深秋紅葉季，日間乾爽舒服，早晚及山區（箱根、河口湖）氣溫較涼，建議「洋蔥式穿法」。</p>
+      <div class="weather-strip">
+        <div class="weather-box">
+          <small>東京・新宿・鐮倉</small>
+          <strong>10°C – 17°C</strong>
+          <span>秋高氣爽・早晚偏涼</span>
+        </div>
+        <div class="weather-box">
+          <small>箱根・大涌谷山區</small>
+          <strong>4°C – 12°C</strong>
+          <span>山上風大・需防風外套</span>
+        </div>
+        <div class="weather-box">
+          <small>富士山・河口湖</small>
+          <strong>3°C – 13°C</strong>
+          <span>日夜溫差大・注意保暖</span>
+        </div>
+      </div>
+      <div class="jma-links">
+        <a class="jma-btn" href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=130000" target="_blank" rel="noopener noreferrer">
+          🌤️ 日本氣象廳：東京都天氣預報 ↗
+        </a>
+        <a class="jma-btn" href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=140000" target="_blank" rel="noopener noreferrer">
+          🌤️ 日本氣象廳：神奈川(箱根/鐮倉)預報 ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== 第一站：神奈川近郊慢活 ==================== -->
+    <div class="stage-banner">
+      <span class="stage-kicker">STAGE 01 · 11月12日 – 11月15日 (3晚)</span>
+      <h2>【第一站：神奈川近郊慢活】</h2>
+      <p>🏨 住宿：Hotel Vista Ebina (海老名) ｜ 鄰近 LaLaPort 商場・小田急線樞紐</p>
+    </div>
+
+    <!-- DAY 1 -->
+    <article class="day-card" id="d12">
+      <header class="day-header">
+        <div class="date-badge">
+          <span class="dow">THU 週四</span>
+          <span class="dom">12</span>
+          <span class="mon">11月 NOV</span>
+        </div>
+        <div class="day-title-wrap">
+          <span class="day-num">DAY 1</span>
+          <h3>抵達與安頓</h3>
+          <p>香港出發 ➔ 成田機場 ➔ 海老名酒店入住 ➔ LaLaPort 晚飯及超市補給</p>
+        </div>
+      </header>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">早上</span>
+            <span class="tl-time-sub">09:55</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-move">✈️ 航班出發</span>
+            </div>
+            <h4 class="tl-title">香港起飛前往東京成田</h4>
+            <p class="tl-desc">乘搭大灣區航空 <strong>HB2326</strong>（09:55 香港出發 ➔ 15:05 抵達成田機場 T2）。機上可先讓父母稍作休息。</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">下午</span>
+            <span class="tl-time-sub">15:05</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-move">🚆 機場出關與鐵路</span>
+            </div>
+            <h4 class="tl-title">抵達出關・搭 N'EX 到新宿轉小田急線直達海老名</h4>
+            <p class="tl-desc">15:05 抵達成田 (T2) 辦理入境及取行李。由機場乘搭舒適對號座 <strong>成田特快 N'EX</strong> 直達新宿站，再轉乘 <strong>小田急線</strong> 直達「海老名站」。</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">傍晚</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-stay">🏨 酒店入住</span>
+            </div>
+            <h4 class="tl-title">入住 Hotel Vista Ebina (海老名)</h4>
+            <p class="tl-desc">抵達海老名後步行前往酒店辦理 Check-in，放低行李、洗個面休息一下。</p>
+            <a class="map-chip" href="https://www.google.com/maps/place/Hotel+Vista+Ebina/@35.4526086,139.3907151,16z/data=!3m1!5s0x6018556f3eab1b1d:0xaa4b73d605c2eb96!4m11!3m10!1s0x6018556f3c77416f:0xfe45e419f9f1b594!5m4!1s2026-11-12!2i3!4m1!1i2!8m2!3d35.4509688!4d139.3917539!16s%2Fg%2F1wn_621f!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">📍 Hotel Vista Ebina 地圖 ↗</a>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">晚上</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-food">🍽️ 晚餐與補給</span>
+            </div>
+            <h4 class="tl-title">LaLaPort 海老名商場晚飯＋超市買生果零食</h4>
+            <p class="tl-desc">帶父母輕鬆步行到旁邊的 <strong>LaLaPort 海老名商場</strong> 食晚飯，商場內餐廳選擇多、座位闊落；食飽順便喺商場超市買定聽朝嘅日本生果同零食。</p>
+            <a class="map-chip" href="https://www.google.com/maps/search/?api=1&query=LaLaport+Ebina" target="_blank" rel="noopener noreferrer">📍 LaLaPort 海老名地圖 ↗</a>
+          </div>
+        </li>
+      </ol>
+      <aside class="day-tips">
+        <span class="day-tips-title">🍵 首日孝親小貼士</span>
+        <ul>
+          <li>第一日剛落機加搭車，到海老名後唔使急，喺 LaLaPort 商場室內行下食飯最舒服。</li>
+          <li>喺小田急線車站可順便確認／購買後天去箱根嘅車票或浪漫特快座位。</li>
+        </ul>
+      </aside>
+    </article>
+
+    <!-- DAY 2 -->
+    <article class="day-card" id="d13">
+      <header class="day-header">
+        <div class="date-badge">
+          <span class="dow">FRI 週五</span>
+          <span class="dom">13</span>
+          <span class="mon">11月 NOV</span>
+        </div>
+        <div class="day-title-wrap">
+          <span class="day-num">DAY 2</span>
+          <h3>鐮倉古都與大佛</h3>
+          <p>小田急線落藤澤 ➔ 轉乘懷舊江之電 ➔ 鐮倉大佛高德院 ➔ 湘南海岸日落</p>
+        </div>
+      </header>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">早上</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-move">🚋 鐵道漫遊</span>
+            </div>
+            <h4 class="tl-title">搭小田急線落藤澤，轉乘「江之電」</h4>
+            <p class="tl-desc">由海老名站乘搭小田急線南下至「藤澤站」，同站輕鬆轉乘充滿懷舊風情嘅 <strong>江之島電鐵（江之電）</strong>，沿途欣賞民居與海岸風光。</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">下午</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-spot">⛩️ 古都名勝</span>
+            </div>
+            <h4 class="tl-title">參觀鐮倉大佛殿高德院</h4>
+            <p class="tl-desc">於「長谷站」落車步行前往參觀國寶青銅大佛 <strong>高德院</strong>。<strong>周邊路況平坦，長輩行得舒服</strong>，沿途仲有和菓子小店同茶屋可以坐低歇腳。</p>
+            <a class="map-chip" href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏殿高徳院" target="_blank" rel="noopener noreferrer">📍 鐮倉大佛高德院地圖 ↗</a>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">黃昏</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-spot">🌅 海景日落</span>
+            </div>
+            <h4 class="tl-title">沿湘南海岸睇日落</h4>
+            <p class="tl-desc">黃昏時分沿住湘南海岸散步睇日落（天氣清朗時更可遠眺富士山剪影），感受海風慢活氣息，之後乘江之電轉小田急線返海老名食晚飯。</p>
+          </div>
+        </li>
+      </ol>
+      <aside class="day-tips">
+        <span class="day-tips-title">🍵 鐮倉慢活貼士</span>
+        <ul>
+          <li>11月中東京日落時間約為 <strong>16:35 左右</strong>，建議 16:00 前去到湘南海岸邊搵個好位置睇日落。</li>
+          <li>可於藤澤站購買「江之電一日乘車券 (Noriorikun)」，當日無限次落車散步唔使次次買飛。</li>
+        </ul>
+      </aside>
+    </article>
+
+    <!-- DAY 3 -->
+    <article class="day-card" id="d14">
+      <header class="day-header">
+        <div class="date-badge">
+          <span class="dow">SAT 週六</span>
+          <span class="dom">14</span>
+          <span class="mon">11月 NOV</span>
+        </div>
+        <div class="day-title-wrap">
+          <span class="day-num">DAY 3</span>
+          <h3>箱根火山地貌</h3>
+          <p>小田急線落箱根 ➔ 箱根空中纜車 ➔ 大涌谷壯觀火山口 ➔ 嘆名物「黑玉子」</p>
+        </div>
+      </header>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">全日</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-move">🚠 纜車與絕景</span>
+              <span class="type-pill type-spot">🌋 火山地貌</span>
+            </div>
+            <h4 class="tl-title">搭小田急線落箱根・轉乘空中纜車上大涌谷</h4>
+            <p class="tl-desc">由海老名乘搭小田急線前往箱根，轉乘登山交通及 <strong>箱根空中纜車</strong> 直上 <strong>大涌谷</strong>。喺高空纜車俯瞰壯觀嘅火山口地貌同秋日山景。</p>
+            <a class="map-chip" href="https://www.google.com/maps/search/?api=1&query=大涌谷" target="_blank" rel="noopener noreferrer">📍 箱根大涌谷地圖 ↗</a>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">必試</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-food">🥚 名物體驗</span>
+            </div>
+            <h4 class="tl-title">買出名嘅「黑玉子」畀父母試下</h4>
+            <p class="tl-desc">去到大涌谷必買用火山溫泉水煮成嘅名物 <strong>「黑玉子」（黑雞蛋）</strong>，日本傳說食一隻可以延壽七年，熱辣辣買畀父母試下最開心！</p>
+          </div>
+        </li>
+      </ol>
+      <aside class="day-tips">
+        <span class="day-tips-title">🍵 箱根登山貼士</span>
+        <ul>
+          <li>大涌谷海拔約 1,044 米，比市區凍 5–7°C 且風較大，記得提父母帶備防風保暖外套及頸巾。</li>
+          <li>星期六箱根遊客較多，建議早上早少少由海老名出發，上落纜車更順暢。</li>
+        </ul>
+      </aside>
+    </article>
+
+    <!-- ==================== 第二站：市區精華與富士山 ==================== -->
+    <div class="stage-banner stage-tokyo">
+      <span class="stage-kicker">STAGE 02 · 11月15日 – 11月18日 (3晚)</span>
+      <h2>【第二站：市區精華與富士山】</h2>
+      <p>🏨 住宿：新宿御苑 Airbnb (設有電梯及廚房) ｜ 賞紅葉・煮和牛・直達河口湖</p>
+    </div>
+
+    <!-- DAY 4 -->
+    <article class="day-card" id="d15">
+      <header class="day-header">
+        <div class="date-badge">
+          <span class="dow">SUN 週日</span>
+          <span class="dom">15</span>
+          <span class="mon">11月 NOV</span>
+        </div>
+        <div class="day-title-wrap">
+          <span class="day-num">DAY 4</span>
+          <h3>轉移陣地與新宿休閒</h3>
+          <p>海老名退房直出新宿 ➔ 安置行李 ➔ 新宿御苑賞紅葉 ➔ Airbnb 廚房煮和牛刺身大餐</p>
+        </div>
+      </header>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">早上</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-move">🚆 輕鬆轉移</span>
+            </div>
+            <h4 class="tl-title">海老名退房，搭小田急線直出新宿</h4>
+            <p class="tl-desc">食過早餐執好行李辦理退房，由海老名站搭 <strong>小田急線一程車直出新宿</strong>，父母唔使中途搬行李轉線。</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">中午</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-stay">🧳 寄存行李</span>
+            </div>
+            <h4 class="tl-title">將行李擺低喺 Airbnb (或新宿站 Locker)</h4>
+            <p class="tl-desc">抵達新宿後，先將行李擺低喺 <strong>新宿御苑 Airbnb</strong>（設有電梯，輕鬆上落）或者新宿站 Locker，兩手空空去食午餐同散步。</p>
+            <a class="map-chip" href="https://www.airbnb.com.hk/rooms/1688728307873218500?unique_share_id=9a6248b0-7b12-47b6-99f3-b07b4bebc001&viralityEntryPoint=1&s=76&source_impression_id=p3_1791900360_P3MlMRh4voJO44g7&check_in=2026-11-15&guests=3&adults=3&check_out=2026-11-18&room_id=1688728307873218500" target="_blank" rel="noopener noreferrer">🏠 開啟 Airbnb 房源連結 ↗</a>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">下午</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-spot">🍁 庭園紅葉</span>
+            </div>
+            <h4 class="tl-title">行下新宿御苑，欣賞11月中初綻紅葉</h4>
+            <p class="tl-desc">慢步皇室庭園 <strong>新宿御苑</strong>，11月中剛好開始有紅葉同金黃銀杏睇！園內草地開揚、步道平坦，仲有日式傳統庭園同溫室，非常適合一家人慢慢行、影靚相。</p>
+            <a class="map-chip" href="https://www.google.com/maps/search/?api=1&query=新宿御苑" target="_blank" rel="noopener noreferrer">📍 新宿御苑地圖 ↗</a>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">晚上</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-food">🥩 大顯身手</span>
+            </div>
+            <h4 class="tl-title">超市買優質和牛同刺身，返 Airbnb 廚房煮畀父母食</h4>
+            <p class="tl-desc"><strong>你大顯身手嘅時候！</strong>去新宿附近嘅大型超市或百貨地庫（Depachika）買優質日本黑毛和牛、新鮮刺身、時令蔬菜同靚生果，返 Airbnb 廚房親自下廚煮餐好嘅畀父母嘆，舒舒服服喺屋企食飯飲熱湯！</p>
+          </div>
+        </li>
+      </ol>
+      <aside class="day-tips">
+        <span class="day-tips-title">🍵 新宿御苑與超市貼士</span>
+        <ul>
+          <li>新宿御苑於 11 月期間開放時間一般為 <strong>09:00 – 16:30</strong>（16:00 最後入場），建議下午 2 點左右入場最寫意。</li>
+          <li>新宿伊勢丹地庫、高島屋地庫或新宿御苑周邊超市都有極高品質嘅和牛同刺身，傍晚仲有機會遇到新鮮割引優惠！</li>
+        </ul>
+      </aside>
+    </article>
+
+    <!-- DAY 5 -->
+    <article class="day-card" id="d16">
+      <header class="day-header">
+        <div class="date-badge">
+          <span class="dow">MON 週一</span>
+          <span class="dom">16</span>
+          <span class="mon">11月 NOV</span>
+        </div>
+        <div class="day-title-wrap">
+          <span class="day-num">DAY 5</span>
+          <h3>富士山絕景一日遊</h3>
+          <p>避開周末人潮 ➔ 新宿直達河口湖 ➔ 大石公園花海與富士山瘋狂打卡</p>
+        </div>
+      </header>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">全日</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-move">🚌 直達河口湖</span>
+              <span class="type-pill type-spot">🗻 富士山絕景</span>
+            </div>
+            <h4 class="tl-title">由新宿搭特急列車或巴士直達河口湖</h4>
+            <p class="tl-desc"><strong>避開周末人潮！</strong>星期一早上由新宿站乘搭 JR 特急「富士回遊」列車或於 Busta 新宿乘搭高速巴士直達 <strong>河口湖站</strong>，一程車坐到底最輕鬆。</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">重點</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-spot">📸 孝親打卡</span>
+            </div>
+            <h4 class="tl-title">大石公園散步・花海前景同富士山瘋狂打卡</h4>
+            <p class="tl-desc">帶父母去河口湖北岸嘅 <strong>大石公園</strong> 散步，步道平坦易行，以湖畔花海同深秋植物做前景，幫一家人同壯麗嘅白雪富士山瘋狂打卡留念！行完仲可以嘆杯富士山雪糕或熱茶。</p>
+            <a class="map-chip" href="https://www.google.com/maps/search/?api=1&query=河口湖大石公園" target="_blank" rel="noopener noreferrer">📍 河口湖大石公園地圖 ↗</a>
+          </div>
+        </li>
+      </ol>
+      <aside class="day-tips">
+        <span class="day-tips-title">🍵 富士山出遊貼士</span>
+        <ul>
+          <li>早上富士山能見度通常最高、雲層最少，建議預約早上時段由新宿出發嘅「富士回遊」或高速巴士。</li>
+          <li>河口湖午餐可試下當地名物熱騰騰嘅「餺饍 (Houtou) 南瓜野菜闊麵」，用鐵鍋上枱非常暖胃，好啱長輩口味。</li>
+        </ul>
+      </aside>
+    </article>
+
+    <!-- DAY 6 -->
+    <article class="day-card" id="d17">
+      <header class="day-header">
+        <div class="date-badge">
+          <span class="dow">TUE 週二</span>
+          <span class="dom">17</span>
+          <span class="mon">11月 NOV</span>
+        </div>
+        <div class="day-title-wrap">
+          <span class="day-num">DAY 6 · 方案 C</span>
+          <h3>東京廚房與宏偉神宮</h3>
+          <p>築地場外市場食海產睇純鐵鑊 ➔ 明治神宮大鳥居 ➔ 表參道建築美學與靚 Cafe</p>
+        </div>
+      </header>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">早上</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-food">🍣 東京廚房</span>
+            </div>
+            <h4 class="tl-title">築地場外市場：食新鮮海產、玉子燒＋睇純鐵鑊廚具</h4>
+            <p class="tl-desc">朝早帶父母去熱鬧嘅 <strong>築地場外市場</strong>，即場嘆新鮮海產、熱辣辣高湯玉子燒；你仲可以順便行下市場內歷史悠久嘅專業刀具同廚具老舖，睇下心儀嘅 <strong>純鐵鑊</strong> 等廚具！</p>
+            <a class="map-chip" href="https://www.google.com/maps/search/?api=1&query=築地場外市場" target="_blank" rel="noopener noreferrer">📍 築地場外市場地圖 ↗</a>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">下午</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-spot">⛩️ 森林神宮</span>
+            </div>
+            <h4 class="tl-title">明治神宮：感受 12 米巨型木造大鳥居同森林莊嚴氣派</h4>
+            <p class="tl-desc">前往東京市中心綠洲 <strong>明治神宮</strong>，穿過 12 米高嘅巨型千年檜木大鳥居，喺百年參天古木森林之中漫步，感受寧靜莊嚴嘅氣派。<br /><strong>👟 重要提醒：記得提醒父母今日著避震好嘅波鞋行碎石路！</strong></p>
+            <a class="map-chip" href="https://www.google.com/maps/search/?api=1&query=明治神宮" target="_blank" rel="noopener noreferrer">📍 明治神宮地圖 ↗</a>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">黃昏</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-spot">🏛️ 建築美學</span>
+              <span class="type-pill type-food">☕ 嘆靚 Cafe</span>
+            </div>
+            <h4 class="tl-title">順路行去表參道・欣賞現代建築設計＋搵間靚 Cafe 飲杯嘢</h4>
+            <p class="tl-desc">由明治神宮原宿口順路行去林蔭大道 <strong>表參道</strong>，沿途欣賞世界級建築大師操刀嘅現代建築設計同招牌排版美學；行到攰就隨時搵間環境舒適嘅靚 Cafe 坐低飲杯嘢、食件甜品休息。</p>
+            <a class="map-chip" href="https://www.google.com/maps/search/?api=1&query=表参道" target="_blank" rel="noopener noreferrer">📍 表參道地圖 ↗</a>
+          </div>
+        </li>
+      </ol>
+      <aside class="day-tips">
+        <span class="day-tips-title">🍵 築地與神宮貼士</span>
+        <ul>
+          <li>築地場外市場星期二正常營業（多數店舖 08:00 – 14:00 最旺），早上去食早餐／早午餐最啱時間。</li>
+          <li>明治神宮參道鋪滿碎石（玉砂利），行路時揀兩旁較平整嘅石板邊位會更慳力。</li>
+          <li>如果喺築地買咗純鐵鑊，記得今晚執喼時放入寄艙行李（不可手提上機）。</li>
+        </ul>
+      </aside>
+    </article>
+
+    <!-- DAY 7 -->
+    <article class="day-card" id="d18">
+      <header class="day-header">
+        <div class="date-badge">
+          <span class="dow">WED 週三</span>
+          <span class="dom">18</span>
+          <span class="mon">11月 NOV</span>
+        </div>
+        <div class="day-title-wrap">
+          <span class="day-num">DAY 7</span>
+          <h3>最後衝刺與回港</h3>
+          <p>靚早餐與收拾行李 ➔ 新宿最後手信藥妝 ➔ N'EX 往成田機場 (12:30前到) ➔ 平安返港</p>
+        </div>
+      </header>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">早上</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-stay">🧳 整理與衝刺</span>
+            </div>
+            <h4 class="tl-title">起床食個靚早餐，收拾行李＋新宿附近買手信藥妝</h4>
+            <p class="tl-desc">最後一朝訓醒食個靚早餐，從容收拾好所有行李。如果仲有時間，可以喺新宿站附近最後買埋手信或藥妝。</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">中午前</span>
+            <span class="tl-time-sub">11:00前出發</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-move">🚆 前往機場</span>
+            </div>
+            <h4 class="tl-title">新宿搭 N'EX 去成田機場 (最遲 12:30 到機場 Check-in)</h4>
+            <p class="tl-desc">由新宿站出發乘搭 <strong>成田特快 N'EX</strong> 前往成田機場第 2 航廈 (T2)，車程約 <strong>1.5 小時</strong>。<br /><strong>⏰ 重點時間線：由於 15:10 起飛，建議最遲 12:30 就要到達機場辦理 Check-in！</strong></p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-period">
+            <span class="period-tag">下午</span>
+            <span class="tl-time-sub">15:10</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-type-row">
+              <span class="type-pill type-move">✈️ 平安回港</span>
+            </div>
+            <h4 class="tl-title">15:10 搭大灣區航空 HB321 飛返香港</h4>
+            <p class="tl-desc">於成田機場 (T2) 入境後可逛免稅店及食午餐，15:10 乘搭 <strong>HB321</strong> 起飛，預計 <strong>19:50</strong> 平安抵達香港，滿載美好回憶返屋企！</p>
+          </div>
+        </li>
+      </ol>
+      <aside class="day-tips">
+        <span class="day-tips-title">🍵 回程重要備忘</span>
+        <ul>
+          <li>新宿往成田機場 N'EX 車程約 85–90 分鐘，建議乘搭 <strong>10:30 – 11:00 左右</strong> 由新宿開出嘅班次，12:15–12:30 前穩陣到達 T2。</li>
+          <li>尿袋（行動電源）必須隨身手提上機，純鐵鑊、刀具、超過 100ml 液體／醬料必須放入寄艙行李。</li>
+        </ul>
+      </aside>
+    </article>
+
+    <!-- 出發前與旅途貼心 Check-list (點擊可打勾儲存) -->
+    <section class="card section-card">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">✅</div>
+        <h2>出發前與隨身備忘清單</h2>
+      </div>
+      <p class="section-lead">可以直接點按下面項目打勾，手機會自動記住進度：</p>
+      <div class="checklist-grid" id="checklist">
+        <label class="check-item">
+          <input type="checkbox" data-key="chk-passport" />
+          <div>
+            <span>護照、機票資料 (HB2326 / HB321) 及 Visit Japan Web QR Code</span>
+            <small>事先截圖保存，過關時唔使臨時搵網絡</small>
+          </div>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="chk-shoes" />
+          <div>
+            <span>提醒父母著避震好、防滑舒服嘅波鞋</span>
+            <small>特別係 Day 6 行明治神宮碎石路同每日散步最緊要</small>
+          </div>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="chk-warm" />
+          <div>
+            <span>保暖防風外套、頸巾、保溫壺</span>
+            <small>Day 3 箱根大涌谷及 Day 5 富士山河口湖較涼，隨時有熱水飲</small>
+          </div>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="chk-ic" />
+          <div>
+            <span>Suica / PASMO 交通卡 ＋ 預訂 N'EX 及河口湖車票</span>
+            <small>小田急線、江之電及市區地鐵一拍即過，減少排隊買飛</small>
+          </div>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="chk-meds" />
+          <div>
+            <span>父母日常平安藥、腸胃藥、潤膚膏及潤唇膏</span>
+            <small>11月日本天氣較乾燥，早晚搽潤膚膏會舒服好多</small>
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <!-- 底部祝福 -->
+    <section class="footer-blessing">
+      <h3>🍁 祝一家人旅途愉快・平安順心</h3>
+      <p>東京・神奈川・富士山 7日6夜 孝親慢活之旅 (2026.11.12 – 11.18)</p>
+    </section>
+
+    <footer>
+      專為家人設計的日本旅遊隨身筆記 · 字體隨時可於頂部切換放大
+    </footer>
+  </main>
+
+  <script>
+    (() => {
+      // 1. 字體大小切換 (標準大字 vs 特大字體)，並記錄於 localStorage
+      const html = document.documentElement;
+      const fontBtns = document.querySelectorAll('.font-btn');
+      const savedSize = localStorage.getItem('tokyo_trip_font_size');
+
+      function applyFontSize(size) {
+        if (size === 'xl') {
+          html.setAttribute('data-font', 'xl');
+        } else {
+          html.removeAttribute('data-font');
+        }
+        fontBtns.forEach(btn => {
+          const isActive = btn.dataset.size === size;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+        try {
+          localStorage.setItem('tokyo_trip_font_size', size);
+        } catch (e) {}
+      }
+
+      if (savedSize === 'xl') {
+        applyFontSize('xl');
+      }
+
+      fontBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyFontSize(btn.dataset.size);
+        });
+      });
+
+      // 2. 出發前清單勾選狀態保存
+      const checkboxes = document.querySelectorAll('#checklist input[type="checkbox"]');
+      checkboxes.forEach(box => {
+        const key = box.dataset.key;
+        const label = box.closest('.check-item');
+        try {
+          if (localStorage.getItem(key) === '1') {
+            box.checked = true;
+            label.classList.add('checked');
+          }
+        } catch (e) {}
+
+        box.addEventListener('change', () => {
+          label.classList.toggle('checked', box.checked);
+          try {
+            localStorage.setItem(key, box.checked ? '1' : '0');
+          } catch (e) {}
+        });
+      });
+
+      // 3. 每日行程快速導覽列 (ScrollSpy 與平滑跳轉)
+      const nav = document.querySelector('.quick-nav');
+      const links = Array.from(document.querySelectorAll('.quick-nav a[href^="#d"]'));
+      const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      if (!nav || !links.length || !sections.length) return;
+
+      let clickLockUntil = 0;
+      let currentId = '';
+
+      function setActive(id, center = true) {
+        if (!id || currentId === id) return;
+        currentId = id;
+        links.forEach(link => {
+          const active = link.hash === `#${id}`;
+          link.classList.toggle('active', active);
+          if (active) {
+            link.setAttribute('aria-current', 'page');
+            if (center) {
+              link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', event => {
+          const target = document.querySelector(link.hash);
+          if (!target) return;
+          event.preventDefault();
+          clickLockUntil = Date.now() + 900;
+          setActive(target.id);
+          history.replaceState(null, '', link.hash);
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      function updateFromScroll() {
+        if (Date.now() < clickLockUntil) return;
+        const marker = nav.getBoundingClientRect().bottom + 40;
+        let active = sections[0];
+        for (const section of sections) {
+          if (section.getBoundingClientRect().top <= marker) {
+            active = section;
+          } else {
+            break;
+          }
+        }
+        const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 12;
+        if (nearBottom) active = sections[sections.length - 1];
+        setActive(active.id);
+      }
+
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          updateFromScroll();
+          ticking = false;
+        });
+      }, { passive: true });
+
+      window.addEventListener('resize', updateFromScroll, { passive: true });
+
+      const initial = location.hash && document.querySelector(location.hash);
+      if (initial && initial.classList.contains('day-card')) {
+        setActive(initial.id, false);
+        requestAnimationFrame(() => initial.scrollIntoView({ block: 'start' }));
+      } else {
+        updateFromScroll();
+      }
+    })();
+  </script>
+</body>
+</html>
