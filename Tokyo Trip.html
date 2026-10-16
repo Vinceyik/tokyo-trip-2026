@@ -731,6 +731,53 @@
       margin-top: 4px;
     }
 
+    /* 行程優化建議與家庭討論備忘 */
+    .proposal-box {
+      padding: 16px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border-strong);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px 12px 12px 6px;
+    }
+
+    .proposal-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: calc(15px * var(--scale));
+      color: var(--ink-body);
+      line-height: 1.65;
+    }
+
+    .proposal-list li + li {
+      margin-top: 8px;
+    }
+
+    .proposal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin: 16px 20px 0;
+      padding: 6px 12px;
+      background: var(--accent-soft);
+      border: 1px solid #E2C6C2;
+      border-radius: 8px;
+      font-size: calc(13.5px * var(--scale));
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.45;
+    }
+
+    .map-links-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .map-links-wrap .inline-map-link {
+      margin-top: 0;
+    }
+
     /* ==========================================================================
        8. 導遊小貼士、11月天氣列表、出發前清單
        ========================================================================== */
@@ -981,7 +1028,7 @@
           <p class="stay-meta">神奈川近郊慢活大本營</p>
           <ul class="stay-features">
             <li>旁邊就是 LaLaPort 大型商場，行街食飯買生果極方便</li>
-            <li>小田急線直達藤澤 (鐮倉)、箱根及新宿，長輩免轉車之苦</li>
+            <li>小田急線直達箱根、藤澤 (鐮倉) 及新宿，長輩免轉車之苦</li>
           </ul>
           <a class="action-btn" href="https://www.google.com/maps/place/Hotel+Vista+Ebina/@35.4526086,139.3907151,16z/data=!3m1!5s0x6018556f3eab1b1d:0xaa4b73d605c2eb96!4m11!3m10!1s0x6018556f3c77416f:0xfe45e419f9f1b594!5m4!1s2026-11-12!2i3!4m1!1i2!8m2!3d35.4509688!4d139.3917539!16s%2Fg%2F1wn_621f!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
             📍 在 Google Maps 開啟酒店位置 ↗
@@ -1002,6 +1049,22 @@
           </a>
         </article>
       </div>
+
+      <hr class="divider" />
+
+      <!-- 💡 行程優化建議總覽 (供與家人討論) -->
+      <div class="block-head">
+        <h2 class="serif">💡 行程優化建議說明（家庭討論用）</h2>
+        <p>為咗令父母行得更舒服、避開人潮，呢份版本作咗以下微調：</p>
+      </div>
+      <div class="proposal-box">
+        <ul class="proposal-list">
+          <li><strong>1. Day 1 改經「橫濱站」轉車（避開新宿下班人潮）：</strong>落機出關剛好遇上東京下班高峰（17:30），改搭 N'EX 到「橫濱站」轉相鐵本線特急去海老名，總站上車 100% 有位坐，免卻喺新宿站迷宮拖篋逼車。</li>
+          <li><strong>2. 對調 Day 2（箱根）與 Day 3（鐮倉）：</strong>11月中係箱根紅葉旺季，改喺<strong>週五（平日）去箱根</strong>可大幅減少排纜車同塞車時間；<strong>週六先去鐮倉</strong>慢遊睇海景日落。</li>
+          <li><strong>3. Day 5 河口湖加入「紅葉迴廊」＋預訂直達車：</strong>11月中大石公園花期已過，但正值「河口湖紅葉祭」最靚時候！同步提醒提前 1 個月搶訂「富士回遊」或高速巴士。</li>
+          <li><strong>4. 精準補給、買純鐵鑊建議與回程手信安排：</strong>加入新宿伊勢丹 B1 買頂級和牛、築地買純鐵鑊揀選與寄存建議，並將手信衝刺移至 Day 6 傍晚及機場免稅店，Day 7 朝早從容去機場。</li>
+        </ul>
+      </div>
     </section>
 
     <!-- 每日快速導覽列 (Sticky) -->
@@ -1014,12 +1077,12 @@
       <a href="#d13">
         <small>週五</small>
         <b>13</b>
-        <span>鐮倉</span>
+        <span>箱根</span>
       </a>
       <a href="#d14">
         <small>週六</small>
         <b>14</b>
-        <span>箱根</span>
+        <span>鐮倉</span>
       </a>
       <a href="#d15">
         <small>週日</small>
@@ -1061,9 +1124,13 @@
         <div class="day-head-text">
           <span class="day-label">DAY 1</span>
           <h3 class="serif">抵達與安頓</h3>
-          <p>成田抵達 ➔ 新宿轉小田急線 ➔ 入住海老名</p>
+          <p>成田抵達 ➔ 橫濱轉相鐵線 (或新宿浪漫特快) ➔ 海老名</p>
         </div>
       </header>
+
+      <div class="proposal-badge">
+        ✨ 改動說明：避開 17:30 新宿站下班恐怖人潮，建議改由「橫濱站」轉相鐵線（總站上車保證有位坐），長輩唔使拖篋逼車。
+      </div>
 
       <ol class="schedule-list">
         <li class="schedule-item">
@@ -1071,8 +1138,12 @@
             <span class="time-pill">下午 · 15:05</span>
             <span class="category-text">出關與交通</span>
           </div>
-          <h4 class="schedule-title">抵達出關・搭 N'EX 到新宿轉小田急線</h4>
-          <p class="schedule-desc">15:05 抵達成田機場 (T2) 出關。先搭成田特快 <strong>N'EX</strong> 到新宿站，再同站轉乘 <strong>小田急線</strong> 直達海老名。</p>
+          <h4 class="schedule-title">抵達出關・搭 N'EX 去橫濱轉相鐵線直達海老名</h4>
+          <p class="schedule-desc">
+            15:05 抵達成田機場 (T2) 出關。<br />
+            <strong>🌟 推薦路線（方案 B）：</strong>搭成田特快 <strong>N'EX 直達「橫濱站」</strong>（約 90 分鐘），同站轉乘 <strong>相鐵本線 (Sotetsu Line) 特急</strong> 直達終點「海老名站」（約 32 分鐘，橫濱係總站 100% 有位坐）。<br />
+            <strong>💡 備選路線：</strong>如照原定去「新宿站」轉小田急線，強烈建議預訂全車對號座嘅 <strong>「小田急浪漫特快 (Romancecar)」</strong> 直達海老名，免同下班族逼普通車。
+          </p>
         </li>
 
         <li class="schedule-item">
@@ -1081,7 +1152,7 @@
             <span class="category-text">酒店入住</span>
           </div>
           <h4 class="schedule-title">入住 Hotel Vista Ebina</h4>
-          <p class="schedule-desc">抵達海老名後辦理入住，放低行李稍作休息。</p>
+          <p class="schedule-desc">抵達海老名後辦理入住（由車站行去酒店約 3–5 分鐘，全平路），放低行李稍作休息。</p>
           <a class="inline-map-link" href="https://www.google.com/maps/place/Hotel+Vista+Ebina/@35.4526086,139.3907151,16z/data=!3m1!5s0x6018556f3eab1b1d:0xaa4b73d605c2eb96!4m11!3m10!1s0x6018556f3c77416f:0xfe45e419f9f1b594!5m4!1s2026-11-12!2i3!4m1!1i2!8m2!3d35.4509688!4d139.3917539!16s%2Fg%2F1wn_621f!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">📍 開啟 Hotel Vista Ebina 地圖 ↗</a>
         </li>
 
@@ -1091,13 +1162,13 @@
             <span class="category-text">晚餐與補給</span>
           </div>
           <h4 class="schedule-title">LaLaPort 海老名商場晚飯＋超市買生果零食</h4>
-          <p class="schedule-desc">帶父母步行到旁邊的 <strong>LaLaPort 海老名商場</strong> 食晚飯，順便喺商場超市買定聽朝嘅生果同零食。</p>
+          <p class="schedule-desc">帶父母步行到旁邊的 <strong>LaLaPort 海老名商場</strong> 食晚飯，順便喺 1 樓 <strong>ロピア (Lopia) 超市</strong> 買定靚生果同聽朝早餐零食。</p>
           <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=LaLaport+Ebina" target="_blank" rel="noopener noreferrer">📍 開啟 LaLaPort 海老名地圖 ↗</a>
         </li>
       </ol>
     </article>
 
-    <!-- DAY 2 -->
+    <!-- DAY 2 (原 Day 3 對調：週五去箱根) -->
     <article class="day-card" id="d13">
       <header class="day-head">
         <div class="day-date-box">
@@ -1106,11 +1177,15 @@
           <span>週五</span>
         </div>
         <div class="day-head-text">
-          <span class="day-label">DAY 2</span>
-          <h3 class="serif">鐮倉古都與大佛</h3>
-          <p>藤澤轉江之電 ➔ 鐮倉大佛高德院 ➔ 湘南海岸日落</p>
+          <span class="day-label">DAY 2 · 平日避開人潮</span>
+          <h3 class="serif">箱根火山地貌與蘆之湖</h3>
+          <p>小田急線落箱根 ➔ 空中纜車上大涌谷 ➔ 試黑玉子</p>
         </div>
       </header>
+
+      <div class="proposal-badge">
+        ✨ 改動說明：同鐮倉對調！11月中係箱根紅葉大旺季，改喺「週五平日」去箱根，排纜車同登山電車嘅人潮比週六少一半以上。
+      </div>
 
       <ol class="schedule-list">
         <li class="schedule-item">
@@ -1118,30 +1193,37 @@
             <span class="time-pill">早上</span>
             <span class="category-text">鐵道移動</span>
           </div>
-          <h4 class="schedule-title">搭小田急線落藤澤，轉乘江之電</h4>
-          <p class="schedule-desc">由海老名搭小田急線直落「藤澤站」，再轉乘充滿懷舊風情嘅 <strong>江之電</strong> 漫遊古都。</p>
+          <h4 class="schedule-title">海老名搭小田急線（或浪漫特快）直達箱根湯本</h4>
+          <p class="schedule-desc">由海老名站搭小田急線落箱根（可購買「箱根周遊券」包晒登山電車、纜車同海賊船，一票通行唔使逐次買飛）。</p>
         </li>
 
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">下午</span>
-            <span class="category-text">古都名勝與日落</span>
+            <span class="time-pill">中午至下午</span>
+            <span class="category-text">箱根大涌谷・蘆之湖</span>
           </div>
-          <h4 class="schedule-title">參觀鐮倉大佛殿高德院・黃昏湘南海岸睇日落</h4>
-          <p class="schedule-desc">參觀 <strong>鐮倉大佛殿高德院</strong>。周邊路況平坦，長輩行得舒服。黃昏時分可沿 <strong>湘南海岸</strong> 散步睇日落。</p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏殿高徳院" target="_blank" rel="noopener noreferrer">📍 開啟鐮倉大佛高德院地圖 ↗</a>
+          <h4 class="schedule-title">搭箱根空中纜車上大涌谷・試名物「黑玉子」</h4>
+          <p class="schedule-desc">
+            轉乘 <strong>箱根空中纜車</strong> 上 <strong>大涌谷</strong>，喺高空欣賞紅葉與火山口地貌，買出名嘅 <strong>「黑玉子」</strong>（溫泉黑雞蛋，傳說食一隻延壽七年）畀父母試下。<br />
+            <strong>💡 順路輕鬆玩法：</strong>食完黑玉子可搭纜車落「桃源台港」，坐 <strong>蘆之湖海賊觀光船</strong> 去元箱根港（父母坐船睇風景好舒服，免行山路）。
+          </p>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=大涌谷" target="_blank" rel="noopener noreferrer">📍 開啟箱根大涌谷地圖 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=箱根海賊船+桃源台港" target="_blank" rel="noopener noreferrer">📍 開啟桃源台港(海賊船)地圖 ↗</a>
+          </div>
         </li>
       </ol>
 
       <aside class="day-note">
         <strong>貼心備忘</strong>
         <ul>
-          <li>11月中日落時間約為 16:30，建議下午 4 點前去到海岸邊欣賞日落。</li>
+          <li>大涌谷山上較市區涼約 5–7°C 且有風，記得提醒父母帶件防風保暖外套及頸巾。</li>
+          <li>山上約 16:00 開始天黑轉凍，建議 15:30–16:00 左右開始落山返箱根湯本／海老名食晚飯。</li>
         </ul>
       </aside>
     </article>
 
-    <!-- DAY 3 -->
+    <!-- DAY 3 (原 Day 2 對調：週六去鐮倉) -->
     <article class="day-card" id="d14">
       <header class="day-head">
         <div class="day-date-box">
@@ -1151,27 +1233,56 @@
         </div>
         <div class="day-head-text">
           <span class="day-label">DAY 3</span>
-          <h3 class="serif">箱根火山地貌</h3>
-          <p>小田急線落箱根 ➔ 空中纜車上大涌谷 ➔ 試黑玉子</p>
+          <h3 class="serif">鐮倉古都與大佛</h3>
+          <p>藤澤轉江之電 ➔ 長谷寺・鐮倉大佛 ➔ 湘南海岸日落</p>
         </div>
       </header>
+
+      <div class="proposal-badge">
+        ✨ 改動說明：移至週六出發。由海老名去藤澤非常近（小田急快車約 25 分鐘），早少少出門口即可輕鬆漫遊古都。
+      </div>
 
       <ol class="schedule-list">
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">全日</span>
-            <span class="category-text">箱根大涌谷</span>
+            <span class="time-pill">早上</span>
+            <span class="category-text">鐵道移動</span>
           </div>
-          <h4 class="schedule-title">搭箱根空中纜車上大涌谷・試名物「黑玉子」</h4>
-          <p class="schedule-desc">搭小田急線落箱根。轉乘 <strong>箱根空中纜車</strong> 上 <strong>大涌谷</strong>，睇壯觀嘅火山口地貌，買出名嘅 <strong>「黑玉子」</strong>（溫泉黑雞蛋）畀父母試下。</p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=大涌谷" target="_blank" rel="noopener noreferrer">📍 開啟箱根大涌谷地圖 ↗</a>
+          <h4 class="schedule-title">搭小田急線落藤澤，轉乘江之電</h4>
+          <p class="schedule-desc">由海老名搭小田急線直落「藤澤站」（約 25 分鐘），購買「江之電 1 日乘車券」，轉乘充滿懷舊風情嘅 <strong>江之電</strong> 漫遊古都。</p>
+        </li>
+
+        <li class="schedule-item">
+          <div class="schedule-meta">
+            <span class="time-pill">中午至下午</span>
+            <span class="category-text">古都名勝與海景</span>
+          </div>
+          <h4 class="schedule-title">參觀鐮倉大佛殿高德院・長谷寺觀海景</h4>
+          <p class="schedule-desc">
+            喺「長谷站」落車，參觀 <strong>鐮倉大佛殿高德院</strong>（全平路，長輩行得舒服）。如果父母精神好，順路可入埋旁邊嘅 <strong>長谷寺</strong>，半山觀景台可以望晒成個由比濱海景，仲有茶屋可以坐低休息。<br />
+            <strong>🍚 午餐推介：</strong>鐮倉名物 <strong>「釜揚吻仔魚丼 (しらす丼)」</strong>，熟吻仔魚鋪滿熱飯，軟綿鮮甜好消化。
+          </p>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏殿高徳院" target="_blank" rel="noopener noreferrer">📍 開啟鐮倉大佛高德院地圖 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=長谷寺+鎌倉" target="_blank" rel="noopener noreferrer">📍 開啟鐮倉長谷寺地圖 ↗</a>
+          </div>
+        </li>
+
+        <li class="schedule-item">
+          <div class="schedule-meta">
+            <span class="time-pill">黃昏 · 16:00前</span>
+            <span class="category-text">湘南海岸日落</span>
+          </div>
+          <h4 class="schedule-title">黃昏湘南海岸（稻村崎／七里濱）散步睇日落</h4>
+          <p class="schedule-desc">黃昏時分搭江之電去 <strong>稻村崎公園</strong> 或 <strong>七里濱海岸</strong> 散步，天氣好時可以同時睇到江之島同富士山剪影日落。</p>
+          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=稲村ヶ崎公園" target="_blank" rel="noopener noreferrer">📍 開啟稻村崎公園(睇日落位)地圖 ↗</a>
         </li>
       </ol>
 
       <aside class="day-note">
         <strong>貼心備忘</strong>
         <ul>
-          <li>大涌谷山上較市區涼約 5–7°C 且有風，記得提醒父母帶件防風保暖外套。</li>
+          <li>11月中日落時間極早（約 16:30 日落），建議下午 3:45–4:00 前去到海岸邊欣賞金色夕陽。</li>
         </ul>
       </aside>
     </article>
@@ -1198,6 +1309,10 @@
         </div>
       </header>
 
+      <div class="proposal-badge">
+        ✨ 改動說明：補充新宿御苑 16:00 停止入場提醒，並加入「伊勢丹新宿店 B1」及超市地圖，方便買靚和牛同煲湯食材。
+      </div>
+
       <ol class="schedule-list">
         <li class="schedule-item">
           <div class="schedule-meta">
@@ -1205,7 +1320,7 @@
             <span class="category-text">退房與移動</span>
           </div>
           <h4 class="schedule-title">海老名退房，搭小田急線直出新宿</h4>
-          <p class="schedule-desc">由海老名站搭小田急線一程車直達新宿，唔使中途轉車搬行李。</p>
+          <p class="schedule-desc">由海老名站搭小田急線（推薦搭「浪漫特快」對號座）一程車直達新宿，唔使中途轉車搬行李。</p>
         </li>
 
         <li class="schedule-item">
@@ -1213,17 +1328,17 @@
             <span class="time-pill">中午</span>
             <span class="category-text">安置行李</span>
           </div>
-          <h4 class="schedule-title">將行李擺低喺 Airbnb (或新宿站 Locker)</h4>
-          <p class="schedule-desc">先去設有電梯嘅新宿御苑 Airbnb 放低行李（或寄存於新宿站 Locker），輕鬆出發散步。</p>
+          <h4 class="schedule-title">將行李擺低喺 Airbnb (或新宿御苑前站 Locker)</h4>
+          <p class="schedule-desc">先去設有電梯嘅新宿御苑 Airbnb 放低行李（如未到 Check-in 時間，可寄存在「新宿三丁目站」或「新宿御苑前站」Locker，比大新宿站容易搵櫃），輕鬆食個晏晝。</p>
         </li>
 
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">下午</span>
+            <span class="time-pill">下午 · 14:30前入園</span>
             <span class="category-text">庭園賞楓</span>
           </div>
-          <h4 class="schedule-title">行下新宿御苑，欣賞11月中紅葉</h4>
-          <p class="schedule-desc">慢步皇室庭園 <strong>新宿御苑</strong>，11月中剛好開始有紅葉睇，園內平路寬敞好行。</p>
+          <h4 class="schedule-title">行下新宿御苑，欣賞11月中紅葉與銀杏</h4>
+          <p class="schedule-desc">慢步皇室庭園 <strong>新宿御苑</strong>，11月中剛好有紅葉同金黃銀杏睇，園內平路寬敞好行。<br /><strong>⏰ 重要時間：11月新宿御苑 16:00 停止售票入場、16:30 閉園，記得下晝 2 點半前入園！</strong></p>
           <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=新宿御苑" target="_blank" rel="noopener noreferrer">📍 開啟新宿御苑地圖 ↗</a>
         </li>
 
@@ -1233,7 +1348,15 @@
             <span class="category-text">親自下廚</span>
           </div>
           <h4 class="schedule-title">買優質和牛同刺身，返 Airbnb 廚房煮畀父母食</h4>
-          <p class="schedule-desc"><strong>你大顯身手嘅時候！</strong>去新宿附近嘅超市買優質和牛同刺身，返 Airbnb 廚房煮畀父母食，仲可以煲啖熱湯。</p>
+          <p class="schedule-desc">
+            <strong>你大顯身手嘅時候！</strong>行完新宿御苑，去買頂級和牛、刺身同蔬菜返 Airbnb 煮畀父母食，仲可以煲啖熱湯：<br />
+            • <strong>買頂級和牛／極靚刺身：</strong>必去 <strong>伊勢丹新宿店 B1 美食街</strong>（名店「人形町今半」、「柿安」和牛專櫃及頂級魚生，行過去約 8 分鐘）。<br />
+            • <strong>買煲湯蔬菜／生果／日常補給：</strong>去附近大型超市 <strong>York Foods 新宿富久店</strong> 或 <strong>Maruetsu 新宿六丁目店</strong>。
+          </p>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=伊勢丹新宿店" target="_blank" rel="noopener noreferrer">📍 伊勢丹新宿店 B1 (買頂級和牛刺身) ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=ヨークフーズ+新宿富久店" target="_blank" rel="noopener noreferrer">📍 York Foods 超市 (買菜煲湯生果) ↗</a>
+          </div>
         </li>
       </ol>
     </article>
@@ -1248,20 +1371,43 @@
         </div>
         <div class="day-head-text">
           <span class="day-label">DAY 5</span>
-          <h3 class="serif">富士山絕景一日遊</h3>
-          <p>避開周末人潮 ➔ 新宿直達河口湖 ➔ 大石公園打卡</p>
+          <h3 class="serif">富士山與紅葉迴廊一日遊</h3>
+          <p>避開周末人潮 ➔ 新宿直達河口湖 ➔ 紅葉迴廊＆大石公園</p>
         </div>
       </header>
+
+      <div class="proposal-badge">
+        ✨ 改動說明：11月中大石公園嘅波波草已經過咗花期，但正值「河口湖紅葉迴廊」最紅最靚嘅時候！特別加入紅葉迴廊同預訂直達車提醒。
+      </div>
 
       <ol class="schedule-list">
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">全日</span>
-            <span class="category-text">河口湖・大石公園</span>
+            <span class="time-pill">早上</span>
+            <span class="category-text">直達交通</span>
           </div>
-          <h4 class="schedule-title">新宿直達河口湖・大石公園花海與富士山打卡</h4>
-          <p class="schedule-desc">避開周末人潮，由新宿搭特急列車或巴士直達 <strong>河口湖</strong>。帶父母去 <strong>大石公園</strong> 散步，以花海做前景幫一家人同富士山瘋狂打卡！</p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=河口湖大石公園" target="_blank" rel="noopener noreferrer">📍 開啟河口湖大石公園地圖 ↗</a>
+          <h4 class="schedule-title">新宿搭「富士回遊」特急或高速巴士直達河口湖</h4>
+          <p class="schedule-desc">
+            避開周末人潮，由新宿一程車直達 <strong>河口湖站</strong>（車程約 1 小時 50 分鐘）。<br />
+            <strong>🎫 搶票提醒：</strong>JR 特急「富士回遊 (Fuji Kaiyu)」及「Busta 新宿高速巴士」極受歡迎，<strong>必須提前 1 個月上網預訂來回班次</strong>（回程建議訂 16:00–16:30 左右）。
+          </p>
+        </li>
+
+        <li class="schedule-item">
+          <div class="schedule-meta">
+            <span class="time-pill">中午至下午</span>
+            <span class="category-text">河口湖紅葉祭・大石公園</span>
+          </div>
+          <h4 class="schedule-title">河口湖「紅葉迴廊」賞楓 ＋ 大石公園望富士山</h4>
+          <p class="schedule-desc">
+            11月中旬正值 <strong>「富士河口湖紅葉祭」</strong> 全盛期！先帶父母去 <strong>紅葉迴廊 (もみじ回廊)</strong> 散步（路面平坦，兩旁巨型楓樹紅晒超壯觀），再去附近嘅 <strong>大石公園</strong> 飲杯咖啡、食雪糕，以湖景同富士山做背景幫一家人瘋狂打卡！<br />
+            <strong>🍲 午餐推介：</strong>河口湖名物 <strong>「餺飥麵 (ほうとう不動)」</strong>，熱辣辣嘅南瓜野菜味噌湯手工闊麵，天涼食最暖胃。
+          </p>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=河口湖もみじ回廊" target="_blank" rel="noopener noreferrer">📍 開啟河口湖紅葉迴廊地圖 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=河口湖大石公園" target="_blank" rel="noopener noreferrer">📍 開啟河口湖大石公園地圖 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=ほうとう不動+東恋路店" target="_blank" rel="noopener noreferrer">📍 ほうとう不動(雲朵建築餐廳) ↗</a>
+          </div>
         </li>
       </ol>
     </article>
@@ -1277,19 +1423,32 @@
         <div class="day-head-text">
           <span class="day-label">DAY 6 · 方案 C</span>
           <h3 class="serif">東京廚房與宏偉神宮</h3>
-          <p>築地市場 ➔ 明治神宮大鳥居 ➔ 表參道建築與 Cafe</p>
+          <p>築地市場(純鐵鑊攻略) ➔ 明治神宮 ➔ 表參道 ＋ 買手信</p>
         </div>
       </header>
+
+      <div class="proposal-badge">
+        ✨ 改動說明：加入「買純鐵鑊」選購建議與寄存攻略（免拎住重鑊行神宮），並建議今晚順便買埋手信藥妝，等聽朝 Day 7 唔使趕。
+      </div>
 
       <ol class="schedule-list">
         <li class="schedule-item">
           <div class="schedule-meta">
             <span class="time-pill">早上</span>
-            <span class="category-text">美食與廚具</span>
+            <span class="category-text">美食與買純鐵鑊攻略</span>
           </div>
-          <h4 class="schedule-title">築地場外市場：食新鮮海產、玉子燒＋睇純鐵鑊</h4>
-          <p class="schedule-desc">去 <strong>築地場外市場</strong> 食新鮮海產、玉子燒，你仲可以順便睇下 <strong>純鐵鑊</strong> 等廚具。</p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=築地場外市場" target="_blank" rel="noopener noreferrer">📍 開啟築地場外市場地圖 ↗</a>
+          <h4 class="schedule-title">築地場外市場：食新鮮海產、玉子燒＋入手純鐵鑊</h4>
+          <p class="schedule-desc">
+            去 <strong>築地場外市場</strong> 食新鮮海產、玉子燒，順便睇廚具。<br />
+            <strong>🍳 買純鐵鑊實用建議：</strong><br />
+            1. <strong>築地首選名店「築地常陸屋 (つきじ常陸屋)」：</strong>專門賣日本職人手工廚具，入面有極受歡迎嘅 <strong>山田工業所（打出し中華鍋）</strong> 同埋 <strong>極 KIWAME (River Light 窒化鐵鍋，極難生鏽、免開鍋、最適合香港家庭爐頭)</strong>。<br />
+            2. <strong>進階廚具迷備選：</strong>如果想一次過睇幾十間鍋具店，可由築地搭地鐵銀座線（約 18 分鐘）去 <strong>「淺草・合羽橋道具街」（如釜淺商店 Kama-Asa）</strong>。<br />
+            3. <strong>尺吋與上機注意：</strong>買 28cm 或 30cm 平底／炒鍋最易放落大行李箱（留意連手柄總長度唔好超過行李箱對角線！），同埋鐵鑊有一定重量（約 1.2–1.5kg），<strong>買完建議先擺入車站 Coin Locker，千祈唔好拎住去行明治神宮！</strong>
+          </p>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=築地場外市場" target="_blank" rel="noopener noreferrer">📍 開啟築地場外市場地圖 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=つきじ常陸屋+築地" target="_blank" rel="noopener noreferrer">📍 開啟「築地常陸屋」(買純鐵鑊)地圖 ↗</a>
+          </div>
         </li>
 
         <li class="schedule-item">
@@ -1298,17 +1457,20 @@
             <span class="category-text">森林神宮</span>
           </div>
           <h4 class="schedule-title">明治神宮：感受 12 米巨型木造大鳥居</h4>
-          <p class="schedule-desc">參拜 <strong>明治神宮</strong>，感受 12 米巨型木造大鳥居同森林嘅莊嚴氣派。<br /><strong>👟 重要提醒：記得提醒父母著避震好嘅波鞋行碎石路。</strong></p>
+          <p class="schedule-desc">
+            參拜 <strong>明治神宮</strong>，感受 12 米巨型木造大鳥居同森林嘅莊嚴氣派。<br />
+            <strong>👟 慳腳力路線提醒：</strong>記得提醒父母著避震好嘅波鞋行碎石路。由「原宿站（南參道）」入，參拜完本殿後<strong>原路向南參道／表參道方向出返嚟</strong>最順路，唔好行去北參道以免父母行得太遠。
+          </p>
           <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=明治神宮" target="_blank" rel="noopener noreferrer">📍 開啟明治神宮地圖 ↗</a>
         </li>
 
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">黃昏</span>
-            <span class="category-text">建築美學與休息</span>
+            <span class="time-pill">黃昏至晚上</span>
+            <span class="category-text">建築美學與手信衝刺</span>
           </div>
-          <h4 class="schedule-title">表參道散步・搵間靚 Cafe 飲杯嘢</h4>
-          <p class="schedule-desc">順路行去 <strong>表參道</strong>，欣賞世界級嘅現代建築設計同排版美學，行到攰就搵間靚 Cafe 坐低飲杯嘢。</p>
+          <h4 class="schedule-title">表參道散步嘆 Cafe・返新宿買齊藥妝手信</h4>
+          <p class="schedule-desc">順路行去 <strong>表參道</strong>，欣賞世界級嘅現代建築設計，行到攰就搵間靚 Cafe 坐低飲杯嘢。<strong>傍晚返新宿食晚飯時，順便買齊藥妝同手信返 Airbnb 執行李</strong>（因為聽朝百貨公司未開門就要去機場）。</p>
           <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=表参道" target="_blank" rel="noopener noreferrer">📍 開啟表參道地圖 ↗</a>
         </li>
       </ol>
@@ -1324,28 +1486,35 @@
         </div>
         <div class="day-head-text">
           <span class="day-label">DAY 7</span>
-          <h3 class="serif">最後衝刺與回港</h3>
-          <p>新宿最後手信 ➔ N'EX 往成田 (12:30前到) ➔ 返港</p>
+          <h3 class="serif">從容退房與回港</h3>
+          <p>Airbnb 靚早餐 ➔ 10:38 N'EX 往成田 T2 ➔ 機場免稅店手信</p>
         </div>
       </header>
+
+      <div class="proposal-badge">
+        ✨ 改動說明：新宿百貨公司 10:00–11:00 先開門，朝早趕唔切行街。改為嘆個靚早餐直去搭 10:38 N'EX，去到成田 T2 免稅店先輕鬆買伴手禮！
+      </div>
 
       <ol class="schedule-list">
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">早上</span>
-            <span class="category-text">收拾與手信</span>
+            <span class="time-pill">早上 · 08:30–10:00</span>
+            <span class="category-text">早餐與退房</span>
           </div>
-          <h4 class="schedule-title">食個靚早餐，收拾行李＋新宿最後衝刺</h4>
-          <p class="schedule-desc">起床食個靚早餐，收拾好行李。如果仲有時間，可以喺新宿站附近最後買啲手信或藥妝。</p>
+          <h4 class="schedule-title">喺 Airbnb 食個靚早餐，從容收拾行李退房</h4>
+          <p class="schedule-desc">用埋 Airbnb 雪櫃最後嘅生果食材整份靚早餐畀父母嘆，檢查護照、隨身物品，並確認<strong>純鐵鑊已妥善放落寄艙大篋</strong>，10:00 左右出發去新宿站。</p>
         </li>
 
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">中午前 · 12:30前到</span>
+            <span class="time-pill">早上 · 10:38 或 11:08</span>
             <span class="category-text">前往機場</span>
           </div>
-          <h4 class="schedule-title">由新宿搭 N'EX 去成田機場 (車程約 1.5 小時)</h4>
-          <p class="schedule-desc">由於 15:10 起飛，<strong>建議最遲 12:30 就要到機場辦理 Check-in</strong>（建議搭 10:30–11:00 左右由新宿開出嘅 N'EX）。</p>
+          <h4 class="schedule-title">由新宿搭 N'EX 直達成田機場 T2 (車程約 80 分鐘)</h4>
+          <p class="schedule-desc">
+            由於 15:10 起飛，<strong>最遲 12:30 要到達成田 T2 辦理 Check-in</strong>。<br />
+            <strong>🚆 建議班次：</strong>搭新宿開出嘅 <strong>10:38 班次（約 11:58 到成田 T2）</strong> 或最遲 <strong>11:08 班次（約 12:27 到成田 T2）</strong>。辦妥寄艙及過關後，喺成田 T2 禁區免稅店最後衝刺買零食伴手禮！
+          </p>
         </li>
 
         <li class="schedule-item">
@@ -1424,6 +1593,13 @@
           </div>
         </label>
         <label class="check-row">
+          <input type="checkbox" data-key="chk-5" />
+          <div>
+            <b>提前 1 個月預訂 Day 5 河口湖來回車票</b>
+            <small>10月16日開賣 JR「富士回遊」或「新宿高速巴士」對號座</small>
+          </div>
+        </label>
+        <label class="check-row">
           <input type="checkbox" data-key="chk-2" />
           <div>
             <b>提醒父母著避震好嘅波鞋</b>
@@ -1441,7 +1617,7 @@
           <input type="checkbox" data-key="chk-4" />
           <div>
             <b>回程純鐵鑊／刀具必須放入寄艙行李</b>
-            <small>行動電源（尿袋）則必須跟身手提上機</small>
+            <small>注意手柄連鑊總長不超過大篋對角線；尿袋則必須跟身手提上機</small>
           </div>
         </label>
       </div>
