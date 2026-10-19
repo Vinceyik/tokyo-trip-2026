@@ -778,6 +778,54 @@
       margin-top: 0;
     }
 
+    /* 每日餐飲建議 */
+    .meal-note {
+      margin: 4px 20px 20px;
+      padding: 14px 16px;
+      background: var(--surface-subtle);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px 10px 10px 4px;
+    }
+
+    .meal-note > strong {
+      display: block;
+      font-size: calc(14.5px * var(--scale));
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .meal-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: calc(15px * var(--scale));
+      color: var(--ink-body);
+      line-height: 1.6;
+    }
+
+    .meal-row + .meal-row {
+      margin-top: 6px;
+    }
+
+    .meal-row b {
+      flex-shrink: 0;
+      width: 3.2em;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .meal-row span {
+      min-width: 0;
+    }
+
+    .meal-row a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     /* ==========================================================================
        8. 導遊小貼士、11月天氣列表、出發前清單
        ========================================================================== */
@@ -1062,7 +1110,7 @@
           <li><strong>1. Day 1 改經「橫濱站」轉車（避開新宿下班人潮）：</strong>落機出關剛好遇上東京下班高峰（17:30），改搭 N'EX 到「橫濱站」轉相鐵本線特急去海老名，總站上車 100% 有位坐，免卻喺新宿站迷宮拖篋逼車。</li>
           <li><strong>2. 對調 Day 2（箱根）與 Day 3（鐮倉）：</strong>11月中係箱根紅葉旺季，改喺<strong>週五（平日）去箱根</strong>可大幅減少排纜車同塞車時間；<strong>週六先去鐮倉</strong>慢遊睇海景日落。</li>
           <li><strong>3. Day 5 河口湖加入「紅葉迴廊」＋預訂直達車：</strong>11月中大石公園花期已過，但正值「河口湖紅葉祭」最靚時候！同步提醒提前 1 個月搶訂「富士回遊」或高速巴士。</li>
-          <li><strong>4. 精準補給、買純鐵鑊建議與回程手信安排：</strong>加入新宿伊勢丹 B1 買生果甜品、築地買純鐵鑊揀選與寄存建議，並將手信衝刺移至 Day 6 傍晚及機場免稅店，Day 7 朝早從容去機場。</li>
+          <li><strong>4. 每日餐廳建議與回程手信安排：</strong>每日加入早、午、晚餐廳建議（箱根はつ花、鐮倉しらすや、河口湖ほうとう不動、表參道まい泉等），並將手信衝刺移至 Day 6 傍晚及機場免稅店，Day 7 朝早從容去機場。</li>
         </ul>
       </div>
     </section>
@@ -1166,6 +1214,13 @@
           <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=LaLaport+Ebina" target="_blank" rel="noopener noreferrer">📍 開啟 LaLaPort 海老名地圖 ↗</a>
         </li>
       </ol>
+
+      <aside class="meal-note">
+        <strong>🍽️ 今日餐飲建議</strong>
+        <div class="meal-row"><b>早餐</b><span>香港機場或航機上</span></div>
+        <div class="meal-row"><b>午餐</b><span>航機上（15:05 抵達，落機後直接出發）</span></div>
+        <div class="meal-row"><b>晚餐</b><span>LaLaPort 海老名餐廳街：「さち福や CAFÉ」和定食、「日本一」とんかつ或「いきいき寿司」迴轉壽司</span></div>
+      </aside>
     </article>
 
     <!-- DAY 2 (原 Day 3 對調：週五去箱根) -->
@@ -1221,6 +1276,13 @@
           <li>山上約 16:00 開始天黑轉凍，建議 15:30–16:00 左右開始落山返箱根湯本／海老名食晚飯。</li>
         </ul>
       </aside>
+
+      <aside class="meal-note">
+        <strong>🍽️ 今日餐飲建議</strong>
+        <div class="meal-row"><b>早餐</b><span>酒店或海老名站便利店</span></div>
+        <div class="meal-row"><b>午餐</b><span>箱根湯本 <a href="https://www.google.com/maps/search/?api=1&query=はつ花+本店+箱根湯本" target="_blank" rel="noopener noreferrer">「はつ花 本店」</a>自然薯蕎麥麵（1934 年創業，湯本站徒步約 7 分鐘）；想食炸物可去強羅 <a href="https://www.google.com/maps/search/?api=1&query=田むら銀かつ亭+本店" target="_blank" rel="noopener noreferrer">「田むら銀かつ亭」</a>豆腐かつ煮</span></div>
+        <div class="meal-row"><b>晚餐</b><span>返海老名，LaLaPort 3F「こめらく」茶漬け・和食，或「串家物語」串揚げ</span></div>
+      </aside>
     </article>
 
     <!-- DAY 3 (原 Day 2 對調：週六去鐮倉) -->
@@ -1259,8 +1321,7 @@
           </div>
           <h4 class="schedule-title">參觀鐮倉大佛殿高德院・長谷寺觀海景</h4>
           <p class="schedule-desc">
-            喺「長谷站」落車，參觀 <strong>鐮倉大佛殿高德院</strong>（全平路，行得舒服）。如果時間同體力許可，順路可入埋旁邊嘅 <strong>長谷寺</strong>，半山觀景台可以望晒成個由比濱海景，仲有茶屋可以坐低休息。<br />
-            <strong>🍚 午餐推介：</strong>鐮倉名物 <strong>「釜揚吻仔魚丼 (しらす丼)」</strong>，熟吻仔魚鋪滿熱飯，軟綿鮮甜好消化。
+            由藤澤搭江之電，先喺「腰越站」落車食午餐（見下方餐飲建議），再搭兩個站去「長谷站」。喺長谷參觀 <strong>鐮倉大佛殿高德院</strong>（全平路，行得舒服）。如果時間同體力許可，順路可入埋旁邊嘅 <strong>長谷寺</strong>，半山觀景台可以望晒成個由比濱海景，仲有茶屋可以坐低休息。<br />
           </p>
           <div class="map-links-wrap">
             <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏殿高徳院" target="_blank" rel="noopener noreferrer">📍 開啟鐮倉大佛高德院地圖 ↗</a>
@@ -1284,6 +1345,13 @@
         <ul>
           <li>11月中日落時間極早（約 16:30 日落），建議下午 3:45–4:00 前去到海岸邊欣賞金色夕陽。</li>
         </ul>
+      </aside>
+
+      <aside class="meal-note">
+        <strong>🍽️ 今日餐飲建議</strong>
+        <div class="meal-row"><b>早餐</b><span>酒店或海老名站便利店</span></div>
+        <div class="meal-row"><b>午餐</b><span>腰越 <a href="https://www.google.com/maps/search/?api=1&query=しらすや+腰越漁港前店" target="_blank" rel="noopener noreferrer">「しらすや 腰越漁港前店」</a>しらすづくし定食（江之電腰越站徒步約 2 分鐘；逢星期四休）</span></div>
+        <div class="meal-row"><b>晚餐</b><span>海老名 <a href="https://www.google.com/maps/search/?api=1&query=とんかつ+日本一+ららぽーと海老名" target="_blank" rel="noopener noreferrer">「日本一 ららぽーと海老名店」</a>とんかつ，或 LaLaPort 其他餐廳</span></div>
       </aside>
     </article>
 
@@ -1342,25 +1410,14 @@
           <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=新宿御苑" target="_blank" rel="noopener noreferrer">📍 開啟新宿御苑地圖 ↗</a>
         </li>
 
-        <li class="schedule-item">
-          <div class="schedule-meta">
-            <span class="time-pill">晚上</span>
-            <span class="category-text">晚餐</span>
-          </div>
-          <h4 class="schedule-title">新宿三丁目晚餐：炸豬扒老店或即炸天婦羅</h4>
-          <p class="schedule-desc">
-            行完新宿御苑，直接行去旁邊嘅 <strong>新宿三丁目</strong> 一帶食晚飯，餐廳集中又近住宿：<br />
-            • <strong>とんかつ 王ろじ：</strong>1921 年創業嘅炸豬扒老店，外脆內嫩，配招牌豚汁好暖胃。<br />
-            • <strong>天ぷら つな八 新宿本店：</strong>即點即炸嘅天婦羅，可以坐低慢慢食。<br />
-            • 飯後可去 <strong>伊勢丹新宿店 B1</strong> 買生果、甜品返住宿做宵夜。
-          </p>
-          <div class="map-links-wrap">
-            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=とんかつ+王ろじ+新宿" target="_blank" rel="noopener noreferrer">📍 とんかつ 王ろじ (炸豬扒) ↗</a>
-            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=天ぷら+つな八+新宿本店" target="_blank" rel="noopener noreferrer">📍 天ぷら つな八 新宿本店 ↗</a>
-            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=伊勢丹新宿店" target="_blank" rel="noopener noreferrer">📍 伊勢丹新宿店 B1 (生果甜品) ↗</a>
-          </div>
-        </li>
       </ol>
+
+      <aside class="meal-note">
+        <strong>🍽️ 今日餐飲建議</strong>
+        <div class="meal-row"><b>早餐</b><span>海老名酒店</span></div>
+        <div class="meal-row"><b>午餐</b><span><a href="https://www.google.com/maps/search/?api=1&query=伊勢丹新宿店+イートパラダイス" target="_blank" rel="noopener noreferrer">伊勢丹新宿店本館 7F「イートパラダイス」</a>餐廳街：天ぷら 銀座天一、すき焼 浅草今半 きらく亭、日本そば おらがそば信州等</span></div>
+        <div class="meal-row"><b>晚餐</b><span>新宿三丁目 <a href="https://www.google.com/maps/search/?api=1&query=とんかつ+王ろじ+新宿" target="_blank" rel="noopener noreferrer">「とんかつ 王ろじ」</a>（1921 年創業）或 <a href="https://www.google.com/maps/search/?api=1&query=天ぷら+つな八+新宿本店" target="_blank" rel="noopener noreferrer">「天ぷら つな八 新宿本店」</a>；飯後伊勢丹 B1 買生果甜品</span></div>
+      </aside>
     </article>
 
     <!-- DAY 5 -->
@@ -1408,10 +1465,17 @@
           <div class="map-links-wrap">
             <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=河口湖もみじ回廊" target="_blank" rel="noopener noreferrer">📍 開啟河口湖紅葉迴廊地圖 ↗</a>
             <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=河口湖大石公園" target="_blank" rel="noopener noreferrer">📍 開啟河口湖大石公園地圖 ↗</a>
-            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=ほうとう不動+東恋路店" target="_blank" rel="noopener noreferrer">📍 ほうとう不動(雲朵建築餐廳) ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=ほうとう不動+河口湖駅前店" target="_blank" rel="noopener noreferrer">📍 ほうとう不動 河口湖駅前店 ↗</a>
           </div>
         </li>
       </ol>
+
+      <aside class="meal-note">
+        <strong>🍽️ 今日餐飲建議</strong>
+        <div class="meal-row"><b>早餐</b><span>新宿站便利店或咖啡店（趕早班車）</span></div>
+        <div class="meal-row"><b>午餐</b><span>河口湖站對面 <a href="https://www.google.com/maps/search/?api=1&query=ほうとう不動+河口湖駅前店" target="_blank" rel="noopener noreferrer">「ほうとう不動 河口湖駅前店」</a>餺飥麵（11:00 開門）</span></div>
+        <div class="meal-row"><b>晚餐</b><span>返新宿 <a href="https://www.google.com/maps/search/?api=1&query=新宿+思い出横丁" target="_blank" rel="noopener noreferrer">「思い出横丁」</a>居酒屋・串燒，或 <a href="https://www.google.com/maps/search/?api=1&query=一蘭+新宿中央東口店" target="_blank" rel="noopener noreferrer">「一蘭 新宿中央東口店」</a>拉麵</span></div>
+      </aside>
     </article>
 
     <!-- DAY 6 -->
@@ -1424,32 +1488,34 @@
         </div>
         <div class="day-head-text">
           <span class="day-label">DAY 6 · 方案 C</span>
-          <h3 class="serif">東京廚具與宏偉神宮</h3>
-          <p>築地市場(純鐵鑊攻略) ➔ 明治神宮 ➔ 表參道 ＋ 買手信</p>
+          <h3 class="serif">築地市場與宏偉神宮</h3>
+          <p>築地場外市場 ➔ 明治神宮 ➔ 表參道 ＋ 買手信</p>
         </div>
       </header>
 
       <div class="proposal-badge">
-        ✨ 改動說明：加入「買純鐵鑊」選購建議與寄存攻略（免拎住重鑊行神宮），並建議今晚順便買埋手信藥妝，等聽朝 Day 7 唔使趕。
+        ✨ 改動說明：加入築地早餐及表參道晚餐餐廳建議；今晚順便買埋手信藥妝，等聽朝 Day 7 唔使趕。
       </div>
 
       <ol class="schedule-list">
         <li class="schedule-item">
           <div class="schedule-meta">
             <span class="time-pill">早上</span>
-            <span class="category-text">美食與買純鐵鑊攻略</span>
+            <span class="category-text">市場早餐</span>
           </div>
-          <h4 class="schedule-title">築地場外市場：食新鮮海產、玉子燒＋入手純鐵鑊</h4>
+          <h4 class="schedule-title">築地場外市場：海鮮丼、玉子燒與牛めし</h4>
           <p class="schedule-desc">
-            去 <strong>築地場外市場</strong> 食新鮮海產、玉子燒，順便睇廚具。<br />
-            <strong>🍳 買純鐵鑊實用建議：</strong><br />
-            1. <strong>築地首選名店「築地常陸屋 (つきじ常陸屋)」：</strong>專門賣日本職人手工廚具，入面有極受歡迎嘅 <strong>山田工業所（打出し中華鍋）</strong> 同埋 <strong>極 KIWAME (River Light 窒化鐵鍋，極難生鏽、免開鍋、最適合香港家用爐頭)</strong>。<br />
-            2. <strong>進階廚具迷備選：</strong>如果想一次過睇幾十間鍋具店，可由築地搭地鐵銀座線（約 18 分鐘）去 <strong>「淺草・合羽橋道具街」（如釜淺商店 Kama-Asa）</strong>。<br />
-            3. <strong>尺吋與上機注意：</strong>買 28cm 或 30cm 平底／炒鍋最易放落大行李箱（留意連手柄總長度唔好超過行李箱對角線！），同埋鐵鑊有一定重量（約 1.2–1.5kg），<strong>買完建議先擺入車站 Coin Locker，千祈唔好拎住去行明治神宮！</strong>
+            去 <strong>築地場外市場</strong> 食早餐兼掃街，場外市場除咗海鮮仲有唔少老字號：<br />
+            • <strong>きつねや：</strong>招牌牛めし，開門早，唔使排壽司店條隊。<br />
+            • <strong>築地寿司清 本店：</strong>1889 年創業嘅江戶前壽司，想食壽司可以揀呢間。<br />
+            • <strong>丸武：</strong>玉子燒名店，買一串邊行邊食。<br />
+            • <strong>瀬川：</strong>海鮮丼份量足，留返做午餐都得。<br />
+            <strong>⏰ 時間提醒：</strong>建議 9:00 左右到場（9 點前係市場買手優先時段），避開中午人潮；場外店舖多數下午就收。
           </p>
           <div class="map-links-wrap">
             <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=築地場外市場" target="_blank" rel="noopener noreferrer">📍 開啟築地場外市場地圖 ↗</a>
-            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=つきじ常陸屋+築地" target="_blank" rel="noopener noreferrer">📍 開啟「築地常陸屋」(買純鐵鑊)地圖 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=きつねや+築地" target="_blank" rel="noopener noreferrer">📍 きつねや (牛めし) ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=築地寿司清+本店" target="_blank" rel="noopener noreferrer">📍 築地寿司清 本店 ↗</a>
           </div>
         </li>
 
@@ -1472,10 +1538,17 @@
             <span class="category-text">建築美學與手信衝刺</span>
           </div>
           <h4 class="schedule-title">表參道散步嘆 Cafe・返新宿買齊藥妝手信</h4>
-          <p class="schedule-desc">順路行去 <strong>表參道</strong>，欣賞世界級嘅現代建築設計，行到攰就搵間靚 Cafe 坐低飲杯嘢。<strong>傍晚返新宿食晚飯時，順便買齊藥妝同手信返 Airbnb 執行李</strong>（因為聽朝百貨公司未開門就要去機場）。</p>
+          <p class="schedule-desc">順路行去 <strong>表參道</strong>，欣賞世界級嘅現代建築設計，行到攰就搵間靚 Cafe 坐低飲杯嘢。黃昏喺表參道食晚飯（見下方餐飲建議），食完返新宿買齊藥妝同手信返住宿執行李（因為聽朝百貨公司未開門就要去機場）。</p>
           <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=表参道" target="_blank" rel="noopener noreferrer">📍 開啟表參道地圖 ↗</a>
         </li>
       </ol>
+
+      <aside class="meal-note">
+        <strong>🍽️ 今日餐飲建議</strong>
+        <div class="meal-row"><b>早餐</b><span>築地場外「きつねや」牛めし，或「築地寿司清 本店」壽司</span></div>
+        <div class="meal-row"><b>午餐</b><span>築地 <a href="https://www.google.com/maps/search/?api=1&query=瀬川+築地" target="_blank" rel="noopener noreferrer">「瀬川」</a>海鮮丼，或場外邊行邊食玉子燒、海鮮串</span></div>
+        <div class="meal-row"><b>晚餐</b><span>表參道 <a href="https://www.google.com/maps/search/?api=1&query=とんかつ+まい泉+青山本店" target="_blank" rel="noopener noreferrer">「とんかつ まい泉 青山本店」</a>（1965 年創業，箸で切れるとんかつ）</span></div>
+      </aside>
     </article>
 
     <!-- DAY 7 -->
@@ -1489,7 +1562,7 @@
         <div class="day-head-text">
           <span class="day-label">DAY 7</span>
           <h3 class="serif">從容退房與回港</h3>
-          <p>Airbnb 靚早餐 ➔ 10:38 N'EX 往成田 T2 ➔ 機場免稅店手信</p>
+          <p>新宿早餐 ➔ 10:38 N'EX 往成田 T2 ➔ 機場免稅店手信</p>
         </div>
       </header>
 
@@ -1503,8 +1576,8 @@
             <span class="time-pill">早上 · 08:30–10:00</span>
             <span class="category-text">早餐與退房</span>
           </div>
-          <h4 class="schedule-title">喺 Airbnb 食個靚早餐，從容收拾行李退房</h4>
-          <p class="schedule-desc">喺新宿附近食個靚早餐（車站周邊唔少咖啡店同定食店 8 點已開門），返住宿收拾行李，檢查護照、隨身物品，並確認<strong>純鐵鑊已妥善放落寄艙大篋</strong>，10:00 左右出發去新宿站。</p>
+          <h4 class="schedule-title">喺新宿附近食個靚早餐，從容收拾行李退房</h4>
+          <p class="schedule-desc">喺新宿站附近食個靚早餐（周邊唔少咖啡店同定食店 8 點已開門），返住宿收拾行李，檢查護照、隨身物品，以及<strong>行動電源必須放喺手提行李</strong>，10:00 左右出發去新宿站。</p>
         </li>
 
         <li class="schedule-item">
@@ -1528,6 +1601,13 @@
           <p class="schedule-desc">於成田機場 (T2) 登機，19:50 平安抵達香港。</p>
         </li>
       </ol>
+
+      <aside class="meal-note">
+        <strong>🍽️ 今日餐飲建議</strong>
+        <div class="meal-row"><b>早餐</b><span>新宿站周邊咖啡店或定食店（8:00 已開門）</span></div>
+        <div class="meal-row"><b>午餐</b><span>成田 T2 過關後餐廳或禁區輕食</span></div>
+        <div class="meal-row"><b>晚餐</b><span>航機上</span></div>
+      </aside>
     </article>
 
     <!-- 導遊小貼士與深秋氣溫參考 -->
@@ -1536,7 +1616,7 @@
         <h2 class="serif">🍵 導遊小貼士</h2>
       </div>
       <div class="quote-box">
-        呢個行程善用<strong>海老名</strong>同<strong>新宿</strong>嘅地理位置：前半段去箱根、鐮倉都係一程車，後半段去河口湖同市區景點亦好方便。全程只換一次住宿，三餐都在外面餐廳慢慢食，唔使趕行程。
+        呢個行程善用<strong>海老名</strong>同<strong>新宿</strong>嘅地理位置：前半段去箱根、鐮倉都係一程車，後半段去河口湖同市區景點亦好方便。全程只換一次住宿，三餐都在外面餐廳慢慢食；每日餐廳建議已列於各日卡片，唔使趕行程。
       </div>
 
       <hr class="divider" />
@@ -1618,8 +1698,8 @@
         <label class="check-row">
           <input type="checkbox" data-key="chk-4" />
           <div>
-            <b>回程純鐵鑊／刀具必須放入寄艙行李</b>
-            <small>注意手柄連鑊總長不超過大篋對角線；尿袋則必須跟身手提上機</small>
+            <b>回程行李：刀具、液體必須寄艙</b>
+            <small>行動電源（尿袋）必須跟身手提上機</small>
           </div>
         </label>
       </div>
