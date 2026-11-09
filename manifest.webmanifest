@@ -1,0 +1,20 @@
+{
+  "name": "東京・神奈川・富士山 七日六夜",
+  "short_name": "東京之旅",
+  "description": "2026年11月12日至18日 東京・神奈川・富士山 孝親之旅行程筆記",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F4F1EA",
+  "theme_color": "#F4F1EA",
+  "lang": "zh-HK",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
