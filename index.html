@@ -339,6 +339,48 @@
     }
     .aunt-card { border-left: 4px solid var(--accent); }
 
+    /* ---------- Day 3 三個方案 ---------- */
+    .plan-compare { display: grid; gap: 8px; margin: 0 20px 16px; }
+    .plan-compare > div {
+      display: grid; grid-template-columns: 28px 1fr; grid-template-rows: auto auto;
+      column-gap: 10px; row-gap: 1px; align-items: center;
+      padding: 10px 12px; background: var(--surface-subtle);
+      border: 1px solid var(--border); border-radius: 10px;
+    }
+    .plan-compare b {
+      grid-row: 1 / 3; width: 28px; height: 28px; border-radius: 7px;
+      background: var(--accent); color: #fff; font-size: 14px;
+      display: grid; place-items: center;
+    }
+    .plan-compare span { font-size: calc(15px * var(--scale)); font-weight: 800; color: var(--ink); }
+    .plan-compare em { font-style: normal; font-size: calc(12.5px * var(--scale)); color: var(--ink-muted); font-weight: 600; }
+
+    details.plan {
+      margin: 0 20px 10px; border: 1px solid var(--border);
+      border-radius: 12px; background: var(--surface-subtle); overflow: hidden;
+    }
+    details.plan > summary {
+      list-style: none; cursor: pointer; min-height: 54px;
+      padding: 12px 16px; display: flex; align-items: center; gap: 10px;
+      font-size: calc(16.5px * var(--scale)); font-weight: 800; color: var(--ink);
+    }
+    details.plan > summary::-webkit-details-marker { display: none; }
+    details.plan > summary .pnum {
+      flex: 0 0 28px; width: 28px; height: 28px; border-radius: 7px;
+      background: var(--accent); color: #fff; font-size: 15px;
+      display: grid; place-items: center;
+    }
+    details.plan > summary .pmeta {
+      margin-left: auto; flex-shrink: 0;
+      font-size: calc(12px * var(--scale)); font-weight: 700; color: var(--ink-muted);
+    }
+    details.plan[open] > summary { background: var(--surface); border-bottom: 1px solid var(--border); }
+    .plan-body { padding: 14px 16px; background: var(--surface); }
+    .plan-body .plan-facts {
+      margin: 0 0 12px; font-size: calc(14.5px * var(--scale)); line-height: 1.6; color: var(--ink-body);
+    }
+    .plan-body .plan-facts b { color: var(--ink); }
+
     /* ---------- 通用資訊區塊 ---------- */
     .info-block + .info-block { margin-top: 18px; }
     .info-block h3 {
@@ -884,105 +926,104 @@
       </aside>
     </article>
 
-    <!-- DAY 3 -->
+    <!-- DAY 3：三個輕鬆方案，即日按天氣及體力選擇 -->
     <article class="day-card" id="d14">
       <header class="day-head">
         <div class="day-date-box"><small>11月</small><b>14</b><span>週六</span></div>
         <div class="day-head-text">
-          <span class="day-label">DAY 3</span>
-          <h3 class="serif">鎌倉古都與江之島</h3>
-          <p>江之電 ➔ 鎌倉大佛 ➔ 江之島 ➔ 湘南海岸日落</p>
+          <span class="day-label">DAY 3 · 三個方案選一</span>
+          <h3 class="serif">鎌倉・江之島・橫濱</h3>
+          <p>三姨今日有中學說明會，全日自由行；即日按天氣選</p>
         </div>
       </header>
 
-      <div class="aunt-banner">📌 三姨今日有中學說明會，<strong>不能同行</strong>，全日自己行。</div>
+      <div class="aunt-banner">📌 三姨今日<strong>不能同行</strong>。以下三個方案都唔需要預約，當日出門前揀一個就可以。</div>
 
-      <ol class="schedule-list">
-        <li class="schedule-item">
-          <div class="schedule-meta">
-            <span class="time-pill">08:00–08:45</span>
-            <span class="category-text">鐵路移動</span>
-          </div>
-          <h4 class="schedule-title">海老名 ➔ 藤澤，買江之電一日券</h4>
-          <p class="schedule-desc">
-            海老名搭小田急線到藤澤（約 25 分鐘）。在藤澤站買 <strong>「江の電 1日乗車券（のりおりくん）」</strong>，約 ¥800，當日無限次上落。
-          </p>
-        </li>
+      <div class="plan-compare">
+        <div><b>A</b><span>鎌倉＋江之島（經典）</span><em>景點最豐富・中等步行</em></div>
+        <div><b>B</b><span>純鎌倉慢遊（最輕鬆）</span><em>步行最少・多坐低</em></div>
+        <div><b>C</b><span>橫濱海濱＋中華街</span><em>落雨首選・全平路</em></div>
+      </div>
 
-        <li class="schedule-item">
-          <div class="schedule-meta">
-            <span class="time-pill">09:00–10:30</span>
-            <span class="category-text">鎌倉大佛</span>
-          </div>
-          <h4 class="schedule-title">長谷站：高德院鐮倉大佛</h4>
-          <p class="schedule-desc">
-            江之電到長谷站，步行約 10 分鐘到 <strong>高德院</strong>。寺院範圍平坦，長輩行得舒服。大佛內部參觀要額外收費，亦可入內。
+      <details class="plan" open>
+        <summary><span class="pnum">A</span>鎌倉＋江之島（經典）<span class="pmeta">中等步行</span></summary>
+        <div class="plan-body">
+          <p class="plan-facts">
+            <b>適合：</b>天氣晴朗、父母體力不錯，想一次過看大佛與海景。<br />
+            <b>步行：</b>約 6,000–7,000 步；大佛一帶平路，長谷寺及江之島有斜路。<br />
+            <b>時間：</b>08:30 出發，17:00 前回到海老名。
           </p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏殿高徳院" target="_blank" rel="noopener noreferrer">📍 高德院地圖 ↗</a>
-        </li>
+          <ol class="step-list">
+            <li>海老名 → 藤澤（小田急約 25 分鐘），買江之電一日券。</li>
+            <li>江之電到長谷站，步行約 10 分鐘到 <b>高德院鐮倉大佛</b>。</li>
+            <li>順路去 <b>長谷寺</b>；如父母膝頭不適可略過，留在山下茶屋休息。</li>
+            <li>午餐：腰越「しらすや」吻仔魚定食（逢星期四休）。</li>
+            <li>下午去 <b>江之島</b>：弁天橋、江島神社；上斜可搭エスカー（另購票）。</li>
+            <li>16:00 回程，晚上在 LaLaPort 海老名食晚餐。</li>
+          </ol>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏殿高徳院" target="_blank" rel="noopener noreferrer">📍 高德院 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=長谷寺+鎌倉" target="_blank" rel="noopener noreferrer">📍 長谷寺 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=江島神社" target="_blank" rel="noopener noreferrer">📍 江島神社 ↗</a>
+          </div>
+        </div>
+      </details>
 
-        <li class="schedule-item">
-          <div class="schedule-meta">
-            <span class="time-pill">10:30–12:00</span>
-            <span class="category-text">長谷寺</span>
-          </div>
-          <h4 class="schedule-title">長谷寺：觀音堂與見晴台</h4>
-          <p class="schedule-desc">
-            由大佛步行 5 分鐘到 <strong>長谷寺</strong>。寺院依山而建，參道有斜路及樓梯；如果父母膝頭唔好，可以只去大佛，或留在山下的茶屋休息。見晴台可以望到由比濱海岸全景。
+      <details class="plan">
+        <summary><span class="pnum">B</span>純鎌倉慢遊（最輕鬆）<span class="pmeta">步行最少</span></summary>
+        <div class="plan-body">
+          <p class="plan-facts">
+            <b>適合：</b>想少走路、多坐低、以散步食飯為主；父母膝頭一般。<br />
+            <b>步行：</b>約 3,000–4,000 步，全程平路。<br />
+            <b>時間：</b>09:30 出發，15:30 回海老名。
           </p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=長谷寺+鎌倉" target="_blank" rel="noopener noreferrer">📍 長谷寺地圖 ↗</a>
-        </li>
+          <ol class="step-list">
+            <li>海老名 → 藤澤 → 鎌倉（約 40 分鐘）。</li>
+            <li><b>小町通</b>散步，平路一條街，邊行邊試小食。</li>
+            <li><b>鶴岡八幡宮</b>：段葛參道全程平路；本殿有幾級樓梯，可在外圍參拜。</li>
+            <li>午餐：小町通或鎌倉站前，選擇多、座位多。</li>
+            <li>飯後咖啡休息；仍有體力可加遊建長寺（步行 15 分鐘，有斜路）。</li>
+            <li>15:00 回程，早啲返海老名休息。</li>
+          </ol>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=鶴岡八幡宮" target="_blank" rel="noopener noreferrer">📍 鶴岡八幡宮 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=鎌倉小町通り" target="_blank" rel="noopener noreferrer">📍 小町通 ↗</a>
+          </div>
+        </div>
+      </details>
 
-        <li class="schedule-item">
-          <div class="schedule-meta">
-            <span class="time-pill">12:00–13:30</span>
-            <span class="category-text">午餐</span>
-          </div>
-          <h4 class="schedule-title">腰越：しらすや 海鮮定食</h4>
-          <p class="schedule-desc">
-            江之電到腰越站，食 <strong>しらすや 腰越漁港前店</strong> 的吻仔魚定食（徒步約 2 分鐘）。逢星期四休，星期六正常營業；假日人多，建議 12 點前到。
+      <details class="plan">
+        <summary><span class="pnum">C</span>橫濱海濱＋中華街<span class="pmeta">落雨首選</span></summary>
+        <div class="plan-body">
+          <p class="plan-facts">
+            <b>適合：</b>落雨、大風，或者不想搭太多車、想多室內活動。<br />
+            <b>步行：</b>約 5,000 步，全平路，沿途商場多、座位多。<br />
+            <b>時間：</b>10:00 出發，17:00 回海老名。
           </p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=しらすや+腰越漁港前店" target="_blank" rel="noopener noreferrer">📍 しらすや 地圖 ↗</a>
-        </li>
-
-        <li class="schedule-item">
-          <div class="schedule-meta">
-            <span class="time-pill">14:00–16:00</span>
-            <span class="category-text">江之島</span>
+          <ol class="step-list">
+            <li>海老名 → 橫濱（相鐵特急約 30 分鐘）。</li>
+            <li><b>紅磚倉庫</b>：海濱商場，室內外都有，行到攰可以坐低飲咖啡。</li>
+            <li>午餐：紅磚倉庫或<b>橫濱中華街</b>。</li>
+            <li><b>山下公園</b>海濱長廊散步，全程平路，望海景。</li>
+            <li>下午行中華街；如落大雨可改去<b>杯麵博物館</b>（室內）。</li>
+            <li>16:30 回橫濱站，返海老名。</li>
+          </ol>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=横浜赤レンガ倉庫" target="_blank" rel="noopener noreferrer">📍 紅磚倉庫 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=山下公園" target="_blank" rel="noopener noreferrer">📍 山下公園 ↗</a>
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=横浜中華街" target="_blank" rel="noopener noreferrer">📍 中華街 ↗</a>
           </div>
-          <h4 class="schedule-title">江之島：弁天橋、江島神社、海邊散步</h4>
-          <p class="schedule-desc">
-            江之電到江之島站，步行約 15 分鐘過 <strong>弁天橋</strong>（全程平路）到江之島。島上參道是上坡路，可以買 <strong>江の島エスカー</strong>（扶手電梯）省腳力。建議只行到 <strong>江島神社 辺津宮</strong> 及海邊，唔需要上到山頂燈塔。
-          </p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=江島神社" target="_blank" rel="noopener noreferrer">📍 江島神社地圖 ↗</a>
-        </li>
-
-        <li class="schedule-item">
-          <div class="schedule-meta">
-            <span class="time-pill">16:00–17:30</span>
-            <span class="category-text">回程・晚餐</span>
-          </div>
-          <h4 class="schedule-title">返回海老名，LaLaPort 晚餐</h4>
-          <p class="schedule-desc">
-            江之島 ➔ 藤澤 ➔ 海老名。晚上在 LaLaPort 海老名食晚餐，順便超市補給。商場約 21:00 關門，記得早少少去。
-          </p>
-        </li>
-      </ol>
+        </div>
+      </details>
 
       <aside class="day-note">
-        <strong>今日貼心備忘</strong>
+        <strong>即日怎樣選</strong>
         <ul>
-          <li>11 月中日落約 <strong>16:30</strong>；如果想睇日落，可以喺江之島海邊留到 16:15 左右。</li>
-          <li>星期六鎌倉人潮多，江之電可能逼；如果可以，盡量避開 9–10 點高峰。</li>
-          <li>今日行路較多，出發前提醒父母着避震好的波鞋。</li>
+          <li><strong>天晴＋體力好：</strong>選 A，一次過看大佛、海景。</li>
+          <li><strong>想輕鬆、怕行樓梯：</strong>選 B，全程平路，隨時坐低。</li>
+          <li><strong>落雨或大風：</strong>選 C，室內商場多，唔怕淋雨。</li>
+          <li>星期六鎌倉人多，無論 A 或 B 都建議 10 點前到。</li>
         </ul>
-      </aside>
-
-      <aside class="meal-note">
-        <strong>🍽️ 今日餐飲</strong>
-        <div class="meal-row"><b>早餐</b><span>酒店或海老名站便利店</span></div>
-        <div class="meal-row"><b>午餐</b><span>腰越「しらすや」吻仔魚定食</span></div>
-        <div class="meal-row"><b>晚餐</b><span>LaLaPort 海老名（和食／とんかつ／迴轉壽司）</span></div>
       </aside>
     </article>
 
