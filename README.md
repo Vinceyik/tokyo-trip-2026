@@ -28,6 +28,8 @@ assets/
   icon.svg                  ← 網站圖示
   oden-night-2026-11-13.jpg ← 三姨提供的海老名夜市海報
   hakone-freepass-route.jpg ← 三姨提供的箱根周遊券截圖
+HANDOVER.md                 ← 交接文件：背景、已定決定、已核實事實、待補資料（AI 先讀這份）
+AGENTS.md                   ← 給 AI 的編輯規則
 README.md                   ← 本文件
 ```
 
@@ -60,6 +62,7 @@ README.md                   ← 本文件
 | Visit Japan Web 步驟 | `Visit Japan Web` |
 | 回程退稅 | `回程退稅流程` |
 | 交通票券 | `交通票券總表` |
+| 邊啲要預訂 | `預訂懶人包` |
 | 購物清單 | `購物清單` |
 | 緊急電話 | `緊急聯絡` |
 | 天氣與衣著 | `11 月天氣與衣著` |
