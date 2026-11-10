@@ -394,6 +394,7 @@
       position: relative; padding: 10px 0 10px 42px;
       font-size: calc(16px * var(--scale)); color: var(--ink-body); line-height: 1.6;
       border-bottom: 1px dashed var(--border);
+      overflow-wrap: anywhere;
     }
     .step-list li:last-child { border-bottom: 0; }
     .step-list li::before {
@@ -665,17 +666,21 @@
 
         <article class="stay-item tokyo">
           <span class="stay-badge">第二站 · 11/15 – 11/18（3晚）</span>
-          <h3>新宿御苑 Airbnb 電梯寓所</h3>
-          <p class="stay-meta">3位成人・設有電梯及廚房</p>
+          <h3>新宿御苑ステイ（金城ビル／Kinjo Building）</h3>
+          <p class="stay-meta">3位成人・「新宿御苑前」站步行 3 分鐘</p>
           <ul class="stay-features">
-            <li>有電梯，唔使抬行李上樓梯</li>
-            <li>設有廚房及洗衣機，長時間住宿好方便</li>
-            <li>新宿御苑徒步可達，便利店及超市林立</li>
+            <li>東京メトロ丸ノ内線「新宿御苑前」站 <strong>2 號出口</strong>右轉直行約 3 分鐘，FamilyMart 轉左再行約 1 分鐘</li>
+            <li>由 JR 新宿站東口沿新宿通り行約 12–15 分鐘；拖行李建議在新宿站截的士，唔使父母行地底迷宮</li>
+            <li>Google Maps 上可能仍顯示舊名「橋場コーポ」，同一個位置，<strong>認「金城ビル」</strong>就對</li>
+            <li>取匙方法、垃圾分類等入住指示，以房東最後發出的訊息為準</li>
           </ul>
           <p class="stay-meta" style="margin-bottom:10px;">
-            日文地址：<span class="fill" contenteditable="true" data-key="addr-airbnb" data-placeholder="點此填寫 Airbnb 日文地址"></span>
+            地址：<strong>〒160-0022 東京都新宿区新宿1-18-10 金城ビル</strong><br />
+            英文地址：1-chōme-18-10 Shinjuku, Shinjuku City, Tokyo 160-0022<br />
+            預訂確認碼：<span class="fill" contenteditable="true" data-key="ref-airbnb" data-placeholder="點此填寫 Airbnb 確認碼"></span>
           </p>
-          <a class="action-btn" href="https://www.airbnb.com.hk/rooms/1688728307873218500?check_in=2026-11-15&guests=3&adults=3&check_out=2026-11-18&room_id=1688728307873218500" target="_blank" rel="noopener noreferrer">🏠 查看 Airbnb 房源 ↗</a>
+          <a class="action-btn" href="https://www.airbnb.com.hk/rooms/1404106957021168058?check_in=2026-11-15&guests=3&adults=3&check_out=2026-11-18&room_id=1404106957021168058" target="_blank" rel="noopener noreferrer">🏠 查看 Airbnb 房源 ↗</a>
+          <a class="action-btn outline" href="https://www.google.com/maps/search/?api=1&query=東京都新宿区新宿1-18-10+金城ビル" target="_blank" rel="noopener noreferrer" style="margin-top:8px;">📍 Google Maps 開啟民宿位置 ↗</a>
         </article>
       </div>
     </section>
@@ -1144,13 +1149,16 @@
       <header class="day-head">
         <div class="day-date-box"><small>11月</small><b>16</b><span>週一</span></div>
         <div class="day-head-text">
-          <span class="day-label">DAY 5 · 已決定跟一日遊</span>
+          <span class="day-label">DAY 5 · 已選定 Klook 一日遊</span>
           <h3 class="serif">富士山・河口湖一日遊</h3>
-          <p>新宿集合 ➔ 紅葉迴廊 ➔ 大石公園 ➔ 回新宿</p>
+          <p>新宿集合 ➔ 新倉山五重塔 ➔ 忍野八海 ➔ 河口湖楓葉迴廊 ➔ 西湖根場 ➔ 回新宿</p>
         </div>
       </header>
 
-      <div class="aunt-banner">🚌 已決定<strong>參加當地一日遊</strong>，詳細集合時間及行程以旅行社確認單為準，網站不另設時間表。</div>
+      <div class="aunt-banner">
+        🚌 已選定 <strong>Klook【富士山西湖古村之旅】一日遊（活動編號 140760）</strong>：新倉山五重塔＋忍野八海＋河口湖楓葉迴廊＋西湖療癒之里根場。11 月出發的團<strong>保證前往「河口湖楓葉迴廊」</strong>（不去大石公園）。詳細集合時間及地點以確認單為準。<br />
+        <a href="https://www.klook.com/zh-HK/activity/140760-mt-fuji-lake-kawaguchiko-sengen-shrine-ancient-village-tour/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">🔗 Klook 140760 行程頁 ↗</a>
+      </div>
 
       <ol class="schedule-list">
         <li class="schedule-item">
@@ -1158,9 +1166,9 @@
             <span class="time-pill">早上</span>
             <span class="category-text">集合出發</span>
           </div>
-          <h4 class="schedule-title">新宿集合，坐旅遊巴直達河口湖</h4>
+          <h4 class="schedule-title">新宿集合，坐旅遊巴出發</h4>
           <p class="schedule-desc">
-            一日遊一般在新宿站西口或南口附近集合，旅遊巴直達河口湖，中途不用轉車，最適合不想拖行李轉車的父母。
+            集合點一般在<strong>新宿站西口一帶</strong>（實際位置以確認單為準）。由新宿御苑 Airbnb 去新宿西口，早上可以直接截的士：車程約 <strong>8–10 分鐘、約 ¥1,300</strong>，免卻父母在新宿站地底迷宮搵出口，行李多或者落雨都輕鬆。
           </p>
           <p class="schedule-desc" style="margin-top:10px;">
             <strong>集合時間：</strong><span class="fill" contenteditable="true" data-key="tour-time" data-placeholder="填寫集合時間"></span><br />
@@ -1172,40 +1180,63 @@
 
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">上午</span>
+            <span class="time-pill">第 1 站</span>
+            <span class="category-text">經典絕景</span>
+          </div>
+          <h4 class="schedule-title">新倉山淺間公園：五重塔・富士山・紅葉同框</h4>
+          <p class="schedule-desc">
+            紅色五重塔（忠靈塔）、秋楓與富士山<strong>同框</strong>，是全世界攝影師都排隊拍的角度，11 月紅葉配雪頂富士山最靚。由停車場行上去約 10–15 分鐘。
+          </p>
+          <p class="schedule-desc" style="margin-top:8px;">
+            <strong>導遊體力貼士：</strong>上展望台的「咲くや姫階段」有 <strong>398 級</strong>石階，父母唔需要夾硬跑樓梯——可以改行<strong>右側平緩的車路斜坡（坂道）</strong>慢慢上；或者索性留在半山的「新倉富士淺間神社」賞楓、買熱食等大家，風景一樣開揚。
+          </p>
+          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=新倉山浅間公園" target="_blank" rel="noopener noreferrer">📍 新倉山淺間公園地圖 ↗</a>
+        </li>
+
+        <li class="schedule-item">
+          <div class="schedule-meta">
+            <span class="time-pill">第 2 站</span>
+            <span class="category-text">名水百選・午餐</span>
+          </div>
+          <h4 class="schedule-title">忍野八海：清澈湧泉＋地道小食午餐</h4>
+          <p class="schedule-desc">
+            富士山融雪經地層過濾而成的 <strong>8 個清澈湧泉</strong>，水清見底，全程平路好行，沿途有茅草屋、水車與富士山景。此站停留時間同時用作<strong>午餐（自理）</strong>。
+          </p>
+          <p class="schedule-desc" style="margin-top:8px;">
+            <strong>午餐貼士：</strong>一落車先入店食碗熱騰騰的<strong>手打蕎麥麵</strong>（例如「池本茶屋」或「名泉そば」），坐低暖一暖；食完再買現烤<strong>艾草餅（草餅）</strong>、熱豆漿、炸魚餅，邊行邊食。唔好反過來先掃街後食飯，唔係就食唔落正餐，父母下晝會肚餓。
+          </p>
+          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=忍野八海" target="_blank" rel="noopener noreferrer">📍 忍野八海地圖 ↗</a>
+        </li>
+
+        <li class="schedule-item">
+          <div class="schedule-meta">
+            <span class="time-pill">第 3 站</span>
             <span class="category-text">紅葉祭主會場</span>
           </div>
           <h4 class="schedule-title">第28回 富士河口湖紅葉祭「もみじ回廊」</h4>
           <p class="schedule-desc">
-            2026 年紅葉祭於 <strong>11月7日–11月29日</strong> 舉行，11 月中旬正值最紅全盛期。梨川兩岸約 150 米巨型楓樹連成紅葉隧道，路面平坦，旁邊有熱食及工藝品攤位。
-          </p>
-          <p class="schedule-desc" style="margin-top:8px;">
-            實際停留時間由導遊安排。如旅行團未包此站，可向導遊提出，或於自由時間自行前往（由河口湖站搭周遊巴士紅線至「久保田一竹美術館」站）。
+            此團於 <strong>11/1–11/30</strong> 期間特別由大石公園改往「河口湖楓葉迴廊」。2026 年紅葉祭於 <strong>11月7日–11月29日</strong> 舉行，11 月 16 日正值最紅全盛期——梨川兩岸約 150 米巨型楓樹連成紅葉隧道，<strong>全程平路</strong>，旁邊有熱食及工藝品屋台，行得慢都唔怕。
           </p>
           <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=河口湖もみじ回廊" target="_blank" rel="noopener noreferrer">📍 紅葉迴廊地圖 ↗</a>
         </li>
 
         <li class="schedule-item">
           <div class="schedule-meta">
-            <span class="time-pill">中午</span>
-            <span class="category-text">午餐</span>
+            <span class="time-pill">第 4 站</span>
+            <span class="category-text">合掌造古村</span>
           </div>
-          <h4 class="schedule-title">午餐（視乎團種：含餐或自理）</h4>
+          <h4 class="schedule-title">西湖療癒之里根場（西湖いやしの里根場）</h4>
           <p class="schedule-desc">
-            部分一日遊包含 <strong>ほうとう（餺飥）</strong> 或日式定食，報名時記得確認。如不包餐，可在河口湖站周邊自由用餐，或請導遊推薦。
+            位於西湖畔、重現約 <strong>20 棟茅葺屋頂古民家</strong>的傳統聚落，背靠零遮擋的富士山與秋楓，係全程最「日本古村」的一站。<br />
+            開放 <strong>09:00–17:00</strong>（最後入場 16:30）；大人門票 <strong>¥500</strong>、團體 ¥450。視乎你訂的套餐是否已包門票，以確認單為準。
           </p>
-        </li>
-
-        <li class="schedule-item">
-          <div class="schedule-meta">
-            <span class="time-pill">下午</span>
-            <span class="category-text">富士山全景</span>
+          <p class="schedule-desc" style="margin-top:8px;">
+            <strong>父母慢遊貼士：</strong>過橋入口處是拍「茅草屋＋富士山」全景的最佳位置。拍完照唔需要逐間爬坡參觀，可以直接帶父母入園內的「茶処 青龍亭」或「食事処 里山」坐低，飲杯熱抹茶、食件甜品歇腳，等集合時間到。
+          </p>
+          <div class="map-links-wrap">
+            <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=西湖いやしの里根場" target="_blank" rel="noopener noreferrer">📍 西湖根場地圖 ↗</a>
+            <a class="inline-map-link" href="https://saikoiyashinosatonenba.jp/" target="_blank" rel="noopener noreferrer">🔗 西湖根場官網 ↗</a>
           </div>
-          <h4 class="schedule-title">大石公園：河口湖與富士山正面同框</h4>
-          <p class="schedule-desc">
-            河口湖北岸最開揚、無遮擋的拍攝點，園內全程平路，有咖啡店及雪糕店可坐下休息。部分團會改去「河口湖天上山公園纜車」或「忍野八海」，以確認單為準。
-          </p>
-          <a class="inline-map-link" href="https://www.google.com/maps/search/?api=1&query=河口湖大石公園" target="_blank" rel="noopener noreferrer">📍 大石公園地圖 ↗</a>
         </li>
 
         <li class="schedule-item">
@@ -1215,7 +1246,7 @@
           </div>
           <h4 class="schedule-title">返回新宿，市區晚餐</h4>
           <p class="schedule-desc">
-            一般傍晚 18:00–19:00 回到新宿。晚餐在新宿解決（見下方選擇），早點回住宿休息。
+            傍晚經中央自動車道返回新宿，視乎路況約 <strong>18:00–19:30</strong> 抵達。為免回程塞車有壓力，當晚晚餐<strong>唔建議死訂限時餐廳</strong>——回到新宿落車後，按實際時間在下方三間之中靈活揀一間。
           </p>
         </li>
       </ol>
@@ -1223,17 +1254,19 @@
       <aside class="day-note">
         <strong>今日貼心備忘</strong>
         <ul>
-          <li><strong>保暖：</strong>河口湖海拔約 830 米，比東京市區凍 5–8°C（早上約 3–6°C），必帶發熱內衣、防風外套及頸巾。</li>
-          <li><strong>坐車：</strong>新宿去河口湖車程約 2 小時，山路有彎位，易暈車的父母建議出發前食暈車藥，並坐前排。</li>
-          <li><strong>天氣：</strong>一日遊風雨不改照常出發；如當日多雲看不到富士山，可向導遊查詢其他觀景點，紅葉迴廊本身仍值得去。</li>
-          <li><strong>集合：</strong>新宿站很大，建議前一晚先實地行一次集合點，或提早 20 分鐘到場。</li>
+          <li><strong>保暖：</strong>河口湖海拔約 830 米，新倉山更高，比東京市區凍 5–8°C（早上約 3–6°C），必帶發熱內衣、防風外套、頸巾及手套，山上風大。</li>
+          <li><strong>坐車：</strong>新宿去河口湖車程約 2 小時，山路有彎位，易暈車的父母建議上車前食暈車藥，並坐旅遊巴前排。</li>
+          <li><strong>樓梯：</strong>新倉山 398 級石階唔一定要行，改行右側平緩斜坡，或留在半山神社賞楓等大家。</li>
+          <li><strong>午餐：</strong>忍野八海一落車先食熱蕎麥麵，之後才掃街買草餅、炸魚餅，父母下晝先夠力。</li>
+          <li><strong>天氣：</strong>一日遊風雨不改照常出發；如當日多雲看不到富士山，可向導遊查詢其他觀景點，紅葉迴廊本身仍然值得去。</li>
+          <li><strong>集合：</strong>新宿站很大，建議前一晚先帶父母實地行一次集合點，或當日提早 20 分鐘到場（的士直達西口最穩陣）。</li>
         </ul>
       </aside>
 
       <aside class="meal-note">
-        <strong>🍽️ 今日餐飲（晚餐新宿 3 選 1）</strong>
-        <div class="meal-row"><b>早餐</b><span>前一晚在伊勢丹 B1 買定麵包，或新宿站便利店</span></div>
-        <div class="meal-row"><b>午餐</b><span>視乎旅行團是否包餐；如自理，可食河口湖名物「ほうとう」</span></div>
+        <strong>🍽️ 今日餐飲（午餐忍野八海自理・晚餐新宿 3 選 1）</strong>
+        <div class="meal-row"><b>早餐</b><span>前一晚在伊勢丹 B1 買定麵包，或新宿站便利店（集合前食，唔好空肚坐兩個鐘車）</span></div>
+        <div class="meal-row"><b>午餐</b><span>忍野八海自理：<a href="https://www.google.com/maps/search/?api=1&query=池本茶屋+忍野八海" target="_blank" rel="noopener noreferrer">池本茶屋</a>（手打蕎麥麵＋炭火燒魚）或 <a href="https://www.google.com/maps/search/?api=1&query=名泉そば+忍野八海" target="_blank" rel="noopener noreferrer">名泉そば</a>（熱湯蕎麥麵）；食完再買現烤草餅、熱豆漿</span></div>
         <div class="meal-row"><b>晚餐</b><span>① <a href="https://www.google.com/maps/search/?api=1&query=うなぎ+登亭+新宿店" target="_blank" rel="noopener noreferrer">うなぎ 登亭 新宿店</a>（炭火鰻魚飯，行完一日郊外補氣力）<br />② <a href="https://www.google.com/maps/search/?api=1&query=AFURI+新宿住友ビル" target="_blank" rel="noopener noreferrer">AFURI 阿夫利</a>（柚子鹽拉麵，清淡不油膩）<br />③ <a href="https://www.google.com/maps/search/?api=1&query=つるとんたん+新宿" target="_blank" rel="noopener noreferrer">つるとんたん 新宿</a>（大碗手打烏冬，熱湯暖胃）</span></div>
       </aside>
     </article>
@@ -1502,7 +1535,7 @@
       </div>
 
       <div class="warn-box" style="margin-bottom:16px;">
-        <b>只有 4 樣要提早訂：</b>富士山一日遊、小田急浪漫特快（11/15）、築地 Tsumugi 早餐（如去）、新宿蟹宴／和牛（如去）。其餘全部去到即場買或拍卡即可。
+        <b>只有 4 樣要提早訂：</b>富士山一日遊（已揀定 Klook 140760，<strong>仲未落單</strong>）、小田急浪漫特快（11/15）、築地 Tsumugi 早餐（如去）、新宿蟹宴／和牛（如去）。其餘全部去到即場買或拍卡即可。
       </div>
 
       <div class="info-block">
@@ -1522,8 +1555,8 @@
             </tr>
             <tr>
               <td><b>11/16</b></td>
-              <td data-label="項目">富士山・河口湖一日遊</td>
-              <td data-label="點訂">紅葉祭期間團位緊張，<strong>今日內訂最好</strong>。確認集合時間、地點、是否包餐、取消政策，然後填入 Day 5 的空格。</td>
+              <td data-label="項目">富士山・河口湖一日遊<br/><small>已選定 Klook【富士山西湖古村之旅（140760）】</small></td>
+              <td data-label="點訂"><a href="https://www.klook.com/zh-HK/activity/140760-mt-fuji-lake-kawaguchiko-sengen-shrine-ancient-village-tour/" target="_blank" rel="noopener noreferrer">Klook 140760 預訂頁 ↗</a><br/>落單時<strong>揀 11/16（一）出發</strong>，紅葉祭期間團位緊張，<strong>今日內訂最好</strong>。訂前確認：①套餐<strong>是否已包西湖根場門票</strong>（現場 ¥500／團體 ¥450）②是否包餐③取消政策。訂妥後將集合時間、地點、確認編號填入 Day 5 空格。</td>
             </tr>
             <tr>
               <td><b>11/15</b></td>
@@ -1550,9 +1583,9 @@
           <li><strong>11/12 去程 N'EX：</strong>唔好預先死訂班次！航班有機會早到或遲出關，落機後去 B1 JR 售票機／窗口買 <strong>N'EX 來回優惠票 ¥5,200</strong>，即場劃最近一班，順手劃埋 11/18 回程。</li>
           <li><strong>11/14 江之電一日券、江之島扶手電梯：</strong>藤澤站售票機即買。</li>
           <li><strong>11/15 新宿御苑：</strong>閘口直接拍 Suica（大人 ¥500）；65 歲以上出示護照去窗口買 ¥250。</li>
-          <li><strong>11/16 河口湖紅葉迴廊、大石公園：</strong>免費入場，唔使票。</li>
+          <li><strong>11/16 河口湖楓葉迴廊：</strong>免費入場，唔使票；西湖療癒之里根場門票現場 ¥500（團體 ¥450），視乎你訂的 Klook 套餐是否已包。</li>
           <li><strong>11/17 明治神宮、神宮外苑銀杏並木：</strong>免費，免預約。</li>
-          <li><strong>其他餐廳</strong>（王ろじ、まい泉、ほうとう不動、小作、しらすや等）：只設現場排隊，早 15–20 分鐘到即可。</li>
+          <li><strong>其他餐廳</strong>（王ろじ、まい泉、しらすや、忍野八海池本茶屋等）：只設現場排隊，早 15–20 分鐘到即可。</li>
         </ul>
       </div>
 

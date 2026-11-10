@@ -1,5 +1,5 @@
 /* 離線快取：網絡優先，失敗時用快取（確保改完內容之後仍然拿到最新版） */
-const CACHE = 'tokyo-trip-v3';
+const CACHE = 'tokyo-trip-v4';
 const ASSETS = [
   './',
   './index.html',
